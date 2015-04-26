@@ -14,6 +14,11 @@ return array
 		'name'  =>  'News module',
 		'type'  =>  Helper_Module::MODULE_SINGLE,
 	),
+	'actions'	=>	array(
+		'alias' =>  'gregor-actions',
+		'name'  =>  'Actions module',
+		'type'  =>  Helper_Module::MODULE_SINGLE,
+	),
 	'photo'	=>	array(
 		'alias' =>  'gregor-photo',
 		'name'  =>  'Photo module',
