@@ -47,22 +47,6 @@
 			'id'         => '{id}',
 			'query'      => Helper_Page::make_query_string($query_array),
 		));
-	
-		$query_array['mode'] = 'up';
-		$up_tpl	= Route::url('modules', array(
-			'controller' => 'news',
-			'action'     => 'position',
-			'id'         => '{id}',
-			'query'      => Helper_Page::make_query_string($query_array),
-		));
-	
-		$query_array['mode'] = 'down';
-		$down_tpl = Route::url('modules', array(
-			'controller' => 'news',
-			'action'     => 'position',
-			'id'         => '{id}',
-			'query'      => Helper_Page::make_query_string($query_array),
-		));
 ?>
 		<table class="table table-bordered table-striped">
 			<colgroup>
@@ -94,14 +78,6 @@
 					<td>
 <?php 
 					if ($ACL->is_allowed($USER, $item, 'edit')) {
-						echo HTML::anchor(str_replace('{id}', $item->id, $down_tpl), '<i class="icon-arrow-down"></i>', array(
-							'class' => 'btn',
-							'title' => __('Move down'),
-						));
-						echo HTML::anchor(str_replace('{id}', $item->id, $up_tpl), '<i class="icon-arrow-up"></i>', array(
-							'class' => 'btn',
-							'title' => __('Move up'),
-						));
 						echo HTML::anchor(str_replace('{id}', $item->id, $edit_tpl), '<i class="icon-edit"></i>', array(
 							'class' => 'btn',
 							'title' => __('Edit'),
