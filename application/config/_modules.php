@@ -9,6 +9,11 @@ return array
 		'type'  =>  Helper_Module::MODULE_SINGLE,
 	),
 */
+	'news'	=>	array(
+		'alias' =>  'gregor-news-no-categories',
+		'name'  =>  'News module',
+		'type'  =>  Helper_Module::MODULE_SINGLE,
+	),
 	'photo'	=>	array(
 		'alias' =>  'gregor-photo',
 		'name'  =>  'Photo module',
