@@ -19,6 +19,11 @@ return array
 		'name'  =>  'Actions module',
 		'type'  =>  Helper_Module::MODULE_SINGLE,
 	),
+	'blog'	=>	array(
+		'alias' =>  'gregor-blog',
+		'name'  =>  'Blog module',
+		'type'  =>  Helper_Module::MODULE_SINGLE,
+	),
 	'photo'	=>	array(
 		'alias' =>  'gregor-photo',
 		'name'  =>  'Photo module',
