@@ -21,15 +21,27 @@
 		<?php endif; ?>
 
 		<?php if ( ! empty($item->$field) AND ! empty($item->id)):?>
+			<div class="js-photo-gallery-holder">
 			<?php
-				$orm_helper->orm( $item );
-				$original = $orm_helper->file_uri( $field );
-				$thumb = Thumb::uri('admin_image_300', $original);
-				$original = URL::base().$original;
+				$img_size = getimagesize(DOCROOT.$orm_helper->file_path('image', $item->image));
+				
+				if ($img_size[0] > 100 OR $img_size[1] > 100) {
+					$thumb = Thumb::uri('admin_image_100', $orm_helper->file_uri('image', $item->image));
+				} else {
+					$thumb = $orm_helper->file_uri('image', $item->image);
+				}
+				
+				if ($img_size[0] > 300 OR $img_size[1] > 300) {
+					$flyout = Thumb::uri('admin_image_300', $orm_helper->file_uri('image', $item->image));
+				} else {
+					$flyout = $orm_helper->file_uri('image', $item->image);
+				}
+				
+				echo HTML::anchor($flyout, HTML::image($thumb), array(
+					'class' => 'js-photo-gallery'
+				));
 			?>
-			<a class="js-photo-gallery" href="<?php echo $original; ?>" title="" target="_blank">
-				<?php echo HTML::image($thumb); ?>
-			</a>
+			</div>
 
 			<?php if ( empty($image_only) OR $image_only !== TRUE): ?>
 				<label class="checkbox" for="<?php echo $field; ?>_field_delete">

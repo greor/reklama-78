@@ -33,7 +33,7 @@ $(document).ready(function(){
 		$(e).hide();
 	});
 
-	$("a.js-photo-gallery").prettyPhoto();
+	$("a.js-photo-gallery").flyout();
 
 	jQuery.datepicker.setDefaults(jQuery.datepicker.regional['ru']);
 	jQuery.datepicker.setDefaults({ dateFormat: 'yy/mm/dd' });

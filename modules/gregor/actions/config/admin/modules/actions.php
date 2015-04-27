@@ -31,7 +31,7 @@ return array(
 					'privilege' => 'access',
 				),
 
-				'program_edit_1'	=>	array(
+				'action_edit_1'	=>	array(
 					'role'      => 'main',
 					'resource'  => 'action',
 					'privilege' => 'edit',

@@ -6,7 +6,6 @@
 
 	<link rel="stylesheet" href="<?php echo $MEDIA; ?>vendor/bootstrap/css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="<?php echo $MEDIA; ?>vendor/bootstrap/css/bootstrap-responsive.css" type="text/css" />
-	<link rel="stylesheet" href="<?php echo $MEDIA; ?>vendor/jquery-pretty-photo/style.css" type="text/css" />
 	<link rel="stylesheet" href="<?php echo $MEDIA; ?>vendor/jquery-ui-bootstrap/jquery-ui-1.8.16.custom.css" type="text/css" />
 	<link rel="stylesheet" href="<?php echo $MEDIA; ?>vendor/jquery-ui-timepicker/style.css" type="text/css" />
 	<link rel="stylesheet" href="<?php echo $MEDIA; ?>vendor/plupload/jquery.plupload.queue/css/jquery.plupload.queue.css" type="text/css" />
@@ -23,7 +22,7 @@
 	<script type="text/javascript" src="<?php echo $MEDIA; ?>vendor/jquery-ui/themeswitchertool.js"></script>
 	<script type="text/javascript" src="<?php echo $MEDIA; ?>vendor/jquery-ui-timepicker/jquery-ui-timepicker-addon.js"></script>
 	<script type="text/javascript" src="<?php echo $MEDIA; ?>vendor/bootstrap/js/bootstrap.js"></script>
-	<script type="text/javascript" src="<?php echo $MEDIA; ?>vendor/jquery-pretty-photo/jquery.prettyPhoto.js"></script>
+	<script type="text/javascript" src="<?php echo $MEDIA; ?>vendor/flyout/jquery.flyout.min.js"></script>
 	<script type="text/javascript" src="<?php echo $MEDIA; ?>vendor/ckeditor-4.6.6/ckeditor.js"></script>
 	<script type="text/javascript" src="<?php echo $MEDIA; ?>vendor/paginator3000/paginator3000.js"></script>
 
@@ -75,18 +74,15 @@
 		</div>
 	</div>
 	<div class="container kr-container">
-		<div id="header"></div>
 		<div class="row kr-main-row">
 <?php 
 			echo $content; 
 ?>
 		</div>
-		<div id="footer">
-			<div class="row">
-				<div class="span12">
-					&copy; <?php echo date('Y')?>
-				</div>
-			</div>
+	</div>
+	<div id="footer">
+		<div class="row">
+			&copy; <?php echo date('Y')?>
 		</div>
 	</div>
 </body>
