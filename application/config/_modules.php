@@ -24,6 +24,11 @@ return array
 		'name'  =>  'Blog module',
 		'type'  =>  Helper_Module::MODULE_SINGLE,
 	),
+	'promo'	=>	array(
+		'alias' =>  'gregor-promo',
+		'name'  =>  'Promo module',
+		'type'  =>  Helper_Module::MODULE_HIDDEN,
+	),
 	'photo'	=>	array(
 		'alias' =>  'gregor-photo',
 		'name'  =>  'Photo module',
