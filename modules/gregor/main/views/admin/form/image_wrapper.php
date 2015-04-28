@@ -37,7 +37,9 @@
 					$flyout = $orm_helper->file_uri('image', $item->image);
 				}
 				
-				echo HTML::anchor($flyout, HTML::image($thumb), array(
+				echo HTML::anchor($flyout, HTML::image($thumb, array(
+					'title' => ''
+				)), array(
 					'class' => 'js-photo-gallery'
 				));
 			?>
@@ -47,9 +49,8 @@
 				<label class="checkbox" for="<?php echo $field; ?>_field_delete">
 					<?php
 						echo Form::checkbox('delete_fields['.$field.']', '1', FALSE, array(
-										'id' => $field.'_field_delete',
-									)),
-							__('Delete image');
+							'id' => $field.'_field_delete',
+						)), __('Delete image');
 					?>
 				</label>
 			<?php endif;?>

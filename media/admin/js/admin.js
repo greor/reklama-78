@@ -33,7 +33,9 @@ $(document).ready(function(){
 		$(e).hide();
 	});
 
-	$("a.js-photo-gallery").flyout();
+	$("a.js-photo-gallery").flyout({
+		closeTip: '(кликните по изображению, чтобы закрыть)'
+	});
 
 	jQuery.datepicker.setDefaults(jQuery.datepicker.regional['ru']);
 	jQuery.datepicker.setDefaults({ dateFormat: 'yy/mm/dd' });

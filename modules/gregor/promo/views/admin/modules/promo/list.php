@@ -78,8 +78,11 @@
 							$flyout = $wrapper->file_uri('image', $item->image);
 						}
 						
-						echo HTML::anchor($flyout, HTML::image($thumb), array(
-							'class' => 'js-photo-gallery'
+						echo HTML::anchor($flyout, HTML::image($thumb, array(
+							'title' => ''
+						)), array(
+							'class' => 'js-photo-gallery',
+							
 						));
 						
 					} else {
