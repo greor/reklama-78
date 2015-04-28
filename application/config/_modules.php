@@ -54,4 +54,9 @@ return array
 		'name'  =>  'Feedback module',
 		'type'  =>  Helper_Module::MODULE_SINGLE,
 	),
+	'blocks'	=>	array(
+		'alias' =>  'gregor-blocks',
+		'name'  =>  'Blocks module',
+		'type'  =>  Helper_Module::MODULE_HIDDEN,
+	),
 );

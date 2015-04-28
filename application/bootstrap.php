@@ -136,6 +136,7 @@ Kohana::modules(array(
 		'gregor-projects'           => MODPATH.'gregor/projects',           // Projects module
 		'gregor-photo'              => MODPATH.'gregor/photo',              // Photo module
 		'gregor-feedback'           => MODPATH.'gregor/feedback',           // Photo module
+		'gregor-blocks'             => MODPATH.'gregor/blocks',             // Blocks module
 ));
 
 /**
