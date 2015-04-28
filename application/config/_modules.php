@@ -29,6 +29,15 @@ return array
 		'name'  =>  'Promo module',
 		'type'  =>  Helper_Module::MODULE_HIDDEN,
 	),
+	'service'	=>	array(
+		'alias' =>  'gregor-service',
+		'name'  =>  'Services module',
+		'type'  =>  Helper_Module::MODULE_SINGLE,
+	),
+		
+		
+		
+		
 	'photo'	=>	array(
 		'alias' =>  'gregor-photo',
 		'name'  =>  'Photo module',

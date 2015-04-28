@@ -131,7 +131,7 @@ Kohana::modules(array(
 		'gregor-actions'            => MODPATH.'gregor/actions',            // Actions module
 		'gregor-blog'               => MODPATH.'gregor/blog',               // Blog module
 		'gregor-promo'              => MODPATH.'gregor/promo',              // Promo module
-// 		'gregor-service' => MODPATH.'gregor/service', // Service module
+		'gregor-service'            => MODPATH.'gregor/service',            // Service module
 // 		'gregor-clients' => MODPATH.'gregor/clients', // Projects module
 // 		'gregor-projects' => MODPATH.'gregor/projects', // Projects module
 // 		'gregor-photo'      => MODPATH.'gregor/photo',       // Photo module
