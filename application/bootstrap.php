@@ -134,7 +134,8 @@ Kohana::modules(array(
 		'gregor-service'            => MODPATH.'gregor/service',            // Service module
 		'gregor-clients'            => MODPATH.'gregor/clients',            // Clients module
 		'gregor-projects'           => MODPATH.'gregor/projects',           // Projects module
-		'gregor-photo'      => MODPATH.'gregor/photo',       // Photo module
+		'gregor-photo'              => MODPATH.'gregor/photo',              // Photo module
+		'gregor-feedback'           => MODPATH.'gregor/feedback',           // Photo module
 ));
 
 /**

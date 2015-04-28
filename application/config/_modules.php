@@ -44,13 +44,14 @@ return array
 		'name'  =>  'Projects module',
 		'type'  =>  Helper_Module::MODULE_HIDDEN,
 	),
-		
-		
-		
-		
 	'photo'	=>	array(
 		'alias' =>  'gregor-photo',
 		'name'  =>  'Photo module',
+		'type'  =>  Helper_Module::MODULE_SINGLE,
+	),
+	'feedback'	=>	array(
+		'alias' =>  'gregor-feedback',
+		'name'  =>  'Feedback module',
 		'type'  =>  Helper_Module::MODULE_SINGLE,
 	),
 );
