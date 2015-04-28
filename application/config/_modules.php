@@ -39,6 +39,11 @@ return array
 		'name'  =>  'Clients module',
 		'type'  =>  Helper_Module::MODULE_HIDDEN,
 	),
+	'projects'	=>	array(
+		'alias' =>  'gregor-projects',
+		'name'  =>  'Projects module',
+		'type'  =>  Helper_Module::MODULE_HIDDEN,
+	),
 		
 		
 		
