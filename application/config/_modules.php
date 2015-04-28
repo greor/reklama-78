@@ -34,6 +34,11 @@ return array
 		'name'  =>  'Services module',
 		'type'  =>  Helper_Module::MODULE_SINGLE,
 	),
+	'clients'	=>	array(
+		'alias' =>  'gregor-clients',
+		'name'  =>  'Clients module',
+		'type'  =>  Helper_Module::MODULE_HIDDEN,
+	),
 		
 		
 		
