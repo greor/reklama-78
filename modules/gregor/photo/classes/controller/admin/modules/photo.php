@@ -42,7 +42,7 @@ class Controller_Admin_Modules_Photo extends Controller_Admin_Front {
 		$orm = ORM::factory('photo_Category')
 			->where('page_id', '=', $this->module_page_id);
 		
-		$this->apply_category_filter($orm);
+// 		$this->apply_category_filter($orm);
 		
 		$categories = $orm->find_all();
 		
@@ -191,13 +191,15 @@ class Controller_Admin_Modules_Photo extends Controller_Admin_Front {
 	
 	private function map_categories($item)
 	{
-		static $_groups;
+		return $item->title;
 		
-		$_groups = empty($_groups)
-			? Kohana::$config->load('_photo.groups')
-			: $_groups;
+// 		static $_groups;
 		
-		return $item->title.' ( '.Arr::get($_groups, $item->group, $item->group).' )';
+// 		$_groups = empty($_groups)
+// 			? Kohana::$config->load('_photo.groups')
+// 			: $_groups;
+		
+// 		return $item->title.' ( '.Arr::get($_groups, $item->group, $item->group).' )';
 	}
 
 	public function action_delete()

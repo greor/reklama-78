@@ -49,10 +49,10 @@ class Model_Photo_Category extends ORM_Base {
 				array( 'max_length', array( ':value', 100 ) ),
 				array( 'alpha_dash' ),
 			),
-			'group' => array(
-				array( 'not_empty' ),
-				array( 'in_array', array( ':value', array('msk','spb') ) ),
-			),
+// 			'group' => array(
+// 				array( 'not_empty' ),
+// 				array( 'in_array', array( ':value', array('msk','spb') ) ),
+// 			),
 			'title' => array(
 				array( 'not_empty' ),
 				array( 'min_length', array( ':value', 2 ) ),

@@ -9,8 +9,8 @@
 		'query'      => $query
 	));
 	
-	$_groups = Kohana::$config
-		->load('_photo.groups');
+// 	$_groups = Kohana::$config
+// 		->load('_photo.groups');
 ?>
 	<div class="row">
 		<div class="span9 kr-page-selector">
@@ -47,7 +47,8 @@
 				</li>
 <?php 
 				if ($breadcrumbs->loaded()) {
-					$_title = $breadcrumbs->title.' ( '.Arr::get($_groups, $breadcrumbs->group, $breadcrumbs->group).' )';
+// 					$_title = $breadcrumbs->title.' ( '.Arr::get($_groups, $breadcrumbs->group, $breadcrumbs->group).' )';
+					$_title = $breadcrumbs->title;
 					echo '<li class="active">', HTML::chars($_title), '</li>';
 				} elseif ( Request::current()->query('cid') == 0 ) {
 					echo '<li class="active">', __('No category'), '</li>';
@@ -160,13 +161,24 @@
 				<td>
 <?php
 				if ($item->image) {
-					$original = $wrapper->file_uri('image', $item->image);
-					$thumb = Thumb::uri('admin_image_100', $original);
-
-					echo HTML::anchor(URL::base().$original, HTML::image($thumb), array(
+					$img_size = getimagesize(DOCROOT.$wrapper->file_path('image', $item->image));
+					
+					if ($img_size[0] > 100 OR $img_size[1] > 100) {
+						$thumb = Thumb::uri('admin_image_100', $wrapper->file_uri('image', $item->image));
+					} else {
+						$thumb = $wrapper->file_uri('image', $item->image);
+					}
+					
+					if ($img_size[0] > 300 OR $img_size[1] > 300) {
+						$flyout = Thumb::uri('admin_image_300', $wrapper->file_uri('image', $item->image));
+					} else {
+						$flyout = $wrapper->file_uri('image', $item->image);
+					}
+					
+					echo HTML::anchor($flyout, HTML::image($thumb, array(
+						'title' => ''
+					)), array(
 						'class' => 'js-photo-gallery',
-						'target' => '_blank',
-						'title'=> $item->image
 					));
 				} else {
 					echo __('No photo');

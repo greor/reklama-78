@@ -52,16 +52,16 @@
 
 /**** group ****/
 		
-		echo View_Admin::factory('form/wrapper', array(
-			'field'    => 'group',
-			'errors'   => $errors,
-			'labels'   => $labels,
-			'required' => $required,
-			'controls' => Form::select('group', Kohana::$config->load('_photo.groups'), $category->group, array(
-				'id'      => 'group_field',
-				'class'   => 'input-xlarge',
-			)),
-		));
+// 		echo View_Admin::factory('form/wrapper', array(
+// 			'field'    => 'group',
+// 			'errors'   => $errors,
+// 			'labels'   => $labels,
+// 			'required' => $required,
+// 			'controls' => Form::select('group', Kohana::$config->load('_photo.groups'), $category->group, array(
+// 				'id'      => 'group_field',
+// 				'class'   => 'input-xlarge',
+// 			)),
+// 		));
 		
 /**** title ****/
 

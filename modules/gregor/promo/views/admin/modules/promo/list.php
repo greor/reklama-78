@@ -82,7 +82,6 @@
 							'title' => ''
 						)), array(
 							'class' => 'js-photo-gallery',
-							
 						));
 						
 					} else {

@@ -25,7 +25,7 @@ CREATE TABLE `prefix_photo_categories` (
 	`status` TINYINT(1) UNSIGNED NOT NULL DEFAULT '0',
 	`uri` VARCHAR(255) NOT NULL DEFAULT '',
 	`code` VARCHAR(100) NOT NULL DEFAULT '',
-	`group` ENUM('msk','spb') NOT NULL DEFAULT 'msk',
+	`group` ENUM('spb') NOT NULL DEFAULT 'spb',
 	`title` VARCHAR(100) NOT NULL DEFAULT '',
 	`title_tag` VARCHAR(255) NOT NULL DEFAULT '',
 	`keywords_tag` VARCHAR(255) NOT NULL DEFAULT '',

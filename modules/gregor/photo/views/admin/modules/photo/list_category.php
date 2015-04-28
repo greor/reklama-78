@@ -3,6 +3,7 @@
 		->load('_photo.groups');
 ?>
 	<div class="row">
+<?php if (0): ?>	
 		<div class="span5">
 			<form class="form-inline" action="<?php echo Request::current()->url(); ?>" method="get">
 <?php
@@ -14,7 +15,8 @@
 				<button class="btn" type="submit"><i class="icon-search">&nbsp;</i></button>
 			</form>
 		</div>
-		<div class="span4 kr-page-selector">
+<?php endif; ?>		
+		<div class="span9 kr-page-selector">
 			<form class="form-inline">
 				<label for="page_select"><?php echo __('Page'); ?>:</label>
 <?php 
@@ -69,16 +71,14 @@
 		<table class="table table-bordered table-striped">
 			<colgroup>
 				<col class="span1">
-				<col class="span3">
+				<col class="span4">
 				<col class="span2">
-				<col class="span1">
 				<col class="span2">
 			</colgroup>
 			<thead>
 				<tr>
 					<th><?php echo __('ID'); ?></th>
-					<th><?php echo __('Year'); ?></th>
-					<th><?php echo __('City'); ?></th>
+					<th><?php echo __('Title'); ?></th>
 					<th><?php echo __('Public date'); ?></th>
 					<th><?php echo __('Actions'); ?></th>
 				</tr>
@@ -95,7 +95,6 @@
 						echo __('No category') 
 ?>
 					</td>
-					<td></td>
 					<td></td>
 					<td>
 <?php
@@ -129,7 +128,6 @@
 						echo HTML::chars($item->title);
 ?>
 					</td>
-					<td><?php echo Arr::get($_groups, $item->group, $item->group); ?></td>
 					<td><?php echo str_replace(' ', '<br>', $item->public_date); ?></td>
 					<td>
 <?php
