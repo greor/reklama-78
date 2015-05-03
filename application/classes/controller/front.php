@@ -17,6 +17,10 @@ class Controller_Front extends Controller_Template {
 	protected $open_graph = array();
 	protected $open_fileds = array( 'title', 'type', 'image', 'description', 'url', 'site_name' );
 	protected $title_delimiter = ' | ';
+	
+	protected $_css = array();
+	protected $_js = array();
+	protected $plugins = array();
 	protected $without_layout = FALSE;
 
 	protected $media;
@@ -72,6 +76,8 @@ class Controller_Front extends Controller_Template {
 		View::bind_global('TITLE', $this->title);
 		View::bind_global('PAGE_META', $this->page_meta);
 		View::set_global('MEDIA', $this->media);
+		View::set_global('CSS', $this->_get_css());
+		View::set_global('JS', $this->_get_js());
 		View::set_global('IS_AJAX', (bool) $this->request->is_ajax());
 		View::set_global('CONFIG', $this->config);
 		View::set_global('NO_IMG', $this->no_img );
@@ -330,6 +336,99 @@ class Controller_Front extends Controller_Template {
 		}
 
 		return $return;
+	}
+	
+	private function _get_css()
+	{
+		$css = array();
+		foreach ($this->_css as $_css) {
+			if (strpos($_css, '/media/') !== 0) {
+				$_css = $this->media.$_css;
+			}
+			$css[] = $_css;
+		}
+		return $css;
+	}
+	
+	private function _get_js()
+	{
+		$js = array();
+		foreach ($this->_js as $_js) {
+			if (strpos($_js, '/media/') !== 0) {
+				$_js = $this->media.$_js;
+			}
+			$js[] = $_js;
+		}
+		return $js;
+	}
+	
+	private function _generate_plugins()
+	{
+		$plugins = $this->_tpl_plugins();
+		foreach ($plugins as $_name => $_conf) {
+			if ( ! in_array($_name, $this->plugins))
+				continue;
+			
+			if (array_key_exists('css', $_conf)) {
+				$this->_css = array_merge($this->_css, $_conf['css']);
+			}
+			if (array_key_exists('js', $_conf)) {
+				$this->_js = array_merge($this->_js, $_conf['js']);
+			}
+		}
+	}
+	
+	protected function switch_on_plugin($name)
+	{
+		if ( ! in_array($name, $this->plugins)) {
+			$this->plugins[] = $name;
+		}
+	}
+	
+	private function _tpl_plugins()
+	{
+		return array(
+			'fancybox' => array(
+				'css' => array('assets/js/fancybox/jquery.fancybox.css'),
+				'js' => array('assets/js/fancybox/jquery.fancybox.pack.js'),
+			),
+			'revolutionslider' => array(
+				'css' => array('assets/js/revolutionslider/css/settings.css'),
+				'js' => array('assets/js/revolutionslider/js/jquery.themepunch.tools.min.js', 'assets/js/revolutionslider/js/jquery.themepunch.revolution.min.js'),
+			),
+			'bxslider' => array(
+				'css' => array('assets/js/bxslider/jquery.bxslider.css'),
+				'js' => array('assets/js/bxslider/jquery.bxslider.min.js'),
+			),
+			'parallax' => array(
+				'js' => array('assets/js/parallax/jquery.parallax-scroll.min.js'),
+			),
+			'isotope' => array(
+				'js' => array('assets/js/isotope/imagesloaded.pkgd.min.js', 'assets/js/isotope/isotope.pkgd.min.js'),
+			),
+			'forms_validate' => array(
+				'js' => array('assets/js/validate/jquery.validate.min.js'),
+			),
+			'forms_submit' => array(
+				'js' => array('assets/js/submit/jquery.form.min.js'),
+			),
+			'googlemaps' => array(
+				'js' => array('http://maps.google.com/maps/api/js?sensor=false', 'assets/js/googlemaps/jquery.gmap.min.js'),
+			),
+			'charts' => array(
+				'js' => array('assets/js/charts/chart.min.js', 'assets/js/charts/jquery.easypiechart.min.js'),
+			),
+			'counter' => array(
+				'js' => array('assets/js/counter/jQuerySimpleCounter.js'),
+			),
+			'ytplayer' => array(
+				'css' => array('assets/js/ytplayer/css/YTPlayer.css'),
+				'js' => array('assets/js/ytplayer/jquery.mb.YTPlayer.js'),
+			),
+			'twitter' => array(
+				'js' => array('assets/js/twitter/twitterfetcher.js'),
+			),
+		);
 	}
 
 } 
