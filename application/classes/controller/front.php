@@ -72,6 +72,8 @@ class Controller_Front extends Controller_Template {
 
 	public function after()
 	{
+		$this->_generate_plugins();
+		
 		View::set_global('BODY_CLASS', $this->body_class);
 		View::bind_global('TITLE', $this->title);
 		View::bind_global('PAGE_META', $this->page_meta);

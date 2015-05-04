@@ -53,9 +53,11 @@
                 </div>
             </div>
         </header>
+        <div class="content">
 <?php 
 		echo $content; 
 ?>
+		</div>
         <footer>
 <?php
 			echo View_Theme::factory('layout/socials'); 
