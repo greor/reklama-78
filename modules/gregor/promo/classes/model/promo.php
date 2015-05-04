@@ -12,6 +12,7 @@ class Model_Promo extends ORM_Base {
 		return array(
 			'title'           => 'Title',
 			'url'             => 'Link',
+			'background'      => 'Background',
 			'image'           => 'Image',
 			'text'            => 'Text',
 			'active'          => 'Active',
@@ -32,10 +33,13 @@ class Model_Promo extends ORM_Base {
 				array( 'max_length', array( ':value', 255 ) ),
 			),
 			'url' => array(
-				array( 'not_empty' ),
+// 				array( 'not_empty' ),
 				array( 'min_length', array( ':value', 3 ) ),
 				array( 'max_length', array( ':value', 255 ) ),
 				array( 'url' ),
+			),
+			'background' => array(
+				array( 'max_length', array( ':value', 255 ) ),
 			),
 			'image' => array(
 				array( 'max_length', array( ':value', 255 ) ),

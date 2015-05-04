@@ -10,4 +10,5 @@ return array(
 	'End date'     => 'Дата окончания',
 	'Start'        => 'Начало',
 	'End'          => 'Окончание',
+	'Background'   => 'Фон',
 );

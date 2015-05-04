@@ -115,6 +115,17 @@
 			)),
 		));
 
+/**** background ****/
+
+		echo View_Admin::factory('form/image_wrapper', array(
+			'field'      => 'background',
+			'orm_helper' => $wrapper,
+			'errors'     => $errors,
+			'labels'     => $labels,
+			'required'   => $required,
+			'help_text'  => '1920x635px'
+		));
+		
 /**** image ****/
 
 		echo View_Admin::factory('form/image_wrapper', array(
@@ -123,6 +134,7 @@
 			'errors'     => $errors,
 			'labels'     => $labels,
 			'required'   => $required,
+			'help_text'  => '786x449px'
 		));
 
 /**** text ****/

@@ -38,8 +38,7 @@
 		<table class="table table-bordered table-striped">
 			<colgroup>
 				<col class="span1">
-				<col class="span2">
-				<col class="span2">
+				<col class="span4">
 				<col class="span1">
 				<col class="span1">
 				<col class="span2">
@@ -47,7 +46,6 @@
 			<thead>
 				<tr>
 					<th><?php echo __('ID'); ?></th>
-					<th><?php echo __('Image'); ?></th>
 					<th><?php echo __('Title'); ?></th>
 					<th><?php echo __('Start'); ?></th>
 					<th><?php echo __('End'); ?></th>
@@ -61,34 +59,6 @@
 ?>
 				<tr>
 					<td><?php echo $item->id ?></td>
-					<td>
-<?php 
-					if ( ! empty($item->image)) {
-						$img_size = getimagesize(DOCROOT.$wrapper->file_path('image', $item->image));
-						
-						if ($img_size[0] > 100 OR $img_size[1] > 100) {
-							$thumb = Thumb::uri('admin_image_100', $wrapper->file_uri('image', $item->image));
-						} else {
-							$thumb = $wrapper->file_uri('image', $item->image);
-						}
-						
-						if ($img_size[0] > 300 OR $img_size[1] > 300) {
-							$flyout = Thumb::uri('admin_image_300', $wrapper->file_uri('image', $item->image));
-						} else {
-							$flyout = $wrapper->file_uri('image', $item->image);
-						}
-						
-						echo HTML::anchor($flyout, HTML::image($thumb, array(
-							'title' => ''
-						)), array(
-							'class' => 'js-photo-gallery',
-						));
-						
-					} else {
-						echo __('No image');						
-					}
-?>
-					</td>
 					<td>
 <?php
 					if ( (bool) $item->active) {
