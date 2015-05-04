@@ -9,5 +9,13 @@ $(document).ready(function() {
 	        height: 500
 	    });
 	});
+	$('textarea.text_editor_br').each(function(i, e){
+		CKEDITOR.replace(e,{
+	        filebrowserUploadUrl : '/uploader?type=Files',
+	        width : 640,
+	        height: 500,
+	        enterMode: CKEDITOR.ENTER_BR
+	    });
+	});
 });
 </script>
