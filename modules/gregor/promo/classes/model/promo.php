@@ -47,7 +47,7 @@ class Model_Promo extends ORM_Base {
 				array( 'date' ),
 			),
 			'hidden_date' => array(
-				array( 'date' ),
+				array( array($this, 'date_ext') ),
 			),
 		);
 	}
@@ -68,5 +68,10 @@ class Model_Promo extends ORM_Base {
 				array(array($this, 'checkbox'))
 			),
 		);
+	}
+	
+	public function date_ext($value)
+	{
+		return Valid::date($value) || ($value == '0000-00-00 00:00:00');
 	}
 }
