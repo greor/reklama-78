@@ -14,12 +14,17 @@
 		<?php if ( empty($image_only) OR $image_only !== TRUE): ?>
 
 			<input type="file" id="<?php echo $field; ?>_field" name="<?php echo $field; ?>" accept="image/*" />
+			<?php if ( ! empty($help_text)): ?>
+				<p class="help-block help-text"><small><strong><?php echo HTML::chars($help_text); ?></strong></small></p>
+			<?php endif; ?>
+			
 			<?php if (isset($errors[ $field ])): ?>
 				<p class="help-block"><?php echo HTML::chars($errors[ $field ]); ?></p>
 			<?php endif; ?>
 
 		<?php endif; ?>
 
+		
 		<?php if ( ! empty($item->$field) AND ! empty($item->id)):?>
 			<div class="js-photo-gallery-holder">
 			<?php
