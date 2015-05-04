@@ -19,6 +19,7 @@ class Model_Promo extends ORM_Base {
 			'position'        => 'Position',
 			'public_date'     => 'Start date',
 			'hidden_date'     => 'End date',
+			'settings'        => 'Settings',
 		);
 	}
 

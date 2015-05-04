@@ -101,7 +101,11 @@ class Controller_Admin_Modules_Promo extends Controller_Admin_Front {
 				$multiple_time = Request::current()->post('multiple_time_h');
 				Request::current()->post( 'hidden_date', $multiple_date.' '.$multiple_time );
 				
-				$wrapper->save(Request::current()->post() + $_FILES);
+				
+				$values = Request::current()->post();
+				$values['settings'] = serialize($values['settings']);
+				
+				$wrapper->save($values + $_FILES);
 
 // 				Controller_Admin_Structure::clear_structure_cache();
 			} catch (ORM_Validation_Exception $e) {

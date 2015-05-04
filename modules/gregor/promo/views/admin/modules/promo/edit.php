@@ -146,8 +146,16 @@
 			'required' => $required,
 			'controls' => Form::textarea('text', $element->text, array(
 				'id'      => 'text_field',
-				'class'   => 'text_editor',
+				'class'   => 'text_editor_br',
 			)),
+		));
+
+/**** settings ****/
+		
+		echo View_Admin::factory('form/revolution_settings', array(
+			'field'    => 'settings',
+			'labels'   => $labels,
+			'values'   => $element->settings
 		));
 
 ?>
