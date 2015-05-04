@@ -28,18 +28,18 @@
 		<?php if ( ! empty($item->$field) AND ! empty($item->id)):?>
 			<div class="js-photo-gallery-holder">
 			<?php
-				$img_size = getimagesize(DOCROOT.$orm_helper->file_path('image', $item->image));
+				$img_size = getimagesize(DOCROOT.$orm_helper->file_path($field, $item->$field));
 				
 				if ($img_size[0] > 100 OR $img_size[1] > 100) {
-					$thumb = Thumb::uri('admin_image_100', $orm_helper->file_uri('image', $item->image));
+					$thumb = Thumb::uri('admin_image_100', $orm_helper->file_uri($field, $item->$field));
 				} else {
-					$thumb = $orm_helper->file_uri('image', $item->image);
+					$thumb = $orm_helper->file_uri($field, $item->$field);
 				}
 				
 				if ($img_size[0] > 300 OR $img_size[1] > 300) {
-					$flyout = Thumb::uri('admin_image_300', $orm_helper->file_uri('image', $item->image));
+					$flyout = Thumb::uri('admin_image_300', $orm_helper->file_uri($field, $item->$field));
 				} else {
-					$flyout = $orm_helper->file_uri('image', $item->image);
+					$flyout = $orm_helper->file_uri($field, $item->$field);
 				}
 				
 				echo HTML::anchor($flyout, HTML::image($thumb, array(
