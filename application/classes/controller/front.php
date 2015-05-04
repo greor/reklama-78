@@ -119,6 +119,7 @@ class Controller_Front extends Controller_Template {
 			->render();
 		$data = array(
 			'content' => $content,
+			'menu' => $this->get_top_menu()
 		);
 		if ( ! $this->request->is_ajax()) 	{
 			$data['page_header'] = $this->page_header;
@@ -318,10 +319,6 @@ class Controller_Front extends Controller_Template {
 			
 			// тут добавляем элементы "подменю"
 			
-			
-			
-			
-			
 			if ( $item->type == 'url' ) {
 				$return_item['uri'] = $item->data;
 				$return[ $item->id ] = $return_item;
@@ -333,6 +330,9 @@ class Controller_Front extends Controller_Template {
 				$return_item['uri'] = $item->uri;
 				$return[ $item->id ] = $return_item;
 			}
+			
+			
+// 			var_dump($current_url, $return_item); die;
 		}
 
 		return $return;

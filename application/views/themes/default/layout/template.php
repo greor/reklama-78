@@ -47,7 +47,7 @@
                     <div class="col-sm-10">
 <?php
 						echo View_Theme::factory('layout/search');
-						echo View_Theme::factory('menu/top');
+						echo View_Theme::factory('menu/top', array('menu' => $menu));
 ?>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
 				<div class="container">
 					<div class="row">
 <?php
-						echo View_Theme::factory('menu/bottom'); 
+						echo View_Theme::factory('menu/bottom', array('menu' => $menu)); 
 						echo View_Theme::factory('layout/about'); 
 						echo View_Theme::factory('layout/contacts'); 
 ?>
