@@ -111,78 +111,78 @@
 
 /**** vk_api_id ****/
 
-		if ( $ACL->is_allowed($USER, $orm, 'edit_vk_api_id') ) {
-			echo View_Admin::factory('form/wrapper', array(
-				'field'    => 'vk_api_id',
-				'errors'   => $errors,
-				'labels'   => $labels,
-				'required' => $required,
-				'controls' => Form::input('vk_api_id', $orm->vk_api_id, array(
-					'id'    => 'vk_api_id_field',
-					'class' => 'input-xlarge',
-				)),
-			));
-		}
+// 		if ( $ACL->is_allowed($USER, $orm, 'edit_vk_api_id') ) {
+// 			echo View_Admin::factory('form/wrapper', array(
+// 				'field'    => 'vk_api_id',
+// 				'errors'   => $errors,
+// 				'labels'   => $labels,
+// 				'required' => $required,
+// 				'controls' => Form::input('vk_api_id', $orm->vk_api_id, array(
+// 					'id'    => 'vk_api_id_field',
+// 					'class' => 'input-xlarge',
+// 				)),
+// 			));
+// 		}
 
 /**** vk_group_id ****/
 
-		if ( $ACL->is_allowed($USER, $orm, 'edit_vk_group_id') ) {
-			echo View_Admin::factory('form/wrapper', array(
-				'field'    => 'vk_group_id',
-				'errors'   => $errors,
-				'labels'   => $labels,
-				'required' => $required,
-				'controls' => Form::input('vk_group_id', $orm->vk_group_id, array(
-					'id'    => 'vk_group_id_field',
-					'class' => 'input-xlarge',
-				)),
-			));
-		}
+// 		if ( $ACL->is_allowed($USER, $orm, 'edit_vk_group_id') ) {
+// 			echo View_Admin::factory('form/wrapper', array(
+// 				'field'    => 'vk_group_id',
+// 				'errors'   => $errors,
+// 				'labels'   => $labels,
+// 				'required' => $required,
+// 				'controls' => Form::input('vk_group_id', $orm->vk_group_id, array(
+// 					'id'    => 'vk_group_id_field',
+// 					'class' => 'input-xlarge',
+// 				)),
+// 			));
+// 		}
 
 /**** fb_app_id ****/
 
-		if ( $ACL->is_allowed($USER, $orm, 'edit_fb_app_id') ) {
-			echo View_Admin::factory('form/wrapper', array(
-				'field'    => 'fb_app_id',
-				'errors'   => $errors,
-				'labels'   => $labels,
-				'required' => $required,
-				'controls' => Form::input('fb_app_id', $orm->fb_app_id, array(
-					'id'    => 'fb_app_id_field',
-					'class' => 'input-xlarge',
-				)),
-			));
-		}
+// 		if ( $ACL->is_allowed($USER, $orm, 'edit_fb_app_id') ) {
+// 			echo View_Admin::factory('form/wrapper', array(
+// 				'field'    => 'fb_app_id',
+// 				'errors'   => $errors,
+// 				'labels'   => $labels,
+// 				'required' => $required,
+// 				'controls' => Form::input('fb_app_id', $orm->fb_app_id, array(
+// 					'id'    => 'fb_app_id_field',
+// 					'class' => 'input-xlarge',
+// 				)),
+// 			));
+// 		}
 
 /**** fb_group_link ****/
 
-		if ( $ACL->is_allowed($USER, $orm, 'edit_fb_group_link') ) {
-			echo View_Admin::factory('form/wrapper', array(
-				'field'    => 'fb_group_link',
-				'errors'   => $errors,
-				'labels'   => $labels,
-				'required' => $required,
-				'controls' => Form::input('fb_group_link', $orm->fb_group_link, array(
-					'id'    => 'fb_group_link_field',
-					'class' => 'input-xlarge',
-				)),
-			));
-		}
+// 		if ( $ACL->is_allowed($USER, $orm, 'edit_fb_group_link') ) {
+// 			echo View_Admin::factory('form/wrapper', array(
+// 				'field'    => 'fb_group_link',
+// 				'errors'   => $errors,
+// 				'labels'   => $labels,
+// 				'required' => $required,
+// 				'controls' => Form::input('fb_group_link', $orm->fb_group_link, array(
+// 					'id'    => 'fb_group_link_field',
+// 					'class' => 'input-xlarge',
+// 				)),
+// 			));
+// 		}
 
 /**** tw_widget ****/
 
-		if ( $ACL->is_allowed($USER, $orm, 'edit_tw_widget') ) {
-			echo View_Admin::factory('form/wrapper', array(
-				'field'    => 'tw_widget',
-				'errors'   => $errors,
-				'labels'   => $labels,
-				'required' => $required,
-				'controls' => Form::input('tw_widget', $orm->tw_widget, array(
-					'id'    => 'tw_widget_field',
-					'class' => 'input-xlarge',
-				)),
-			));
-		}
+// 		if ( $ACL->is_allowed($USER, $orm, 'edit_tw_widget') ) {
+// 			echo View_Admin::factory('form/wrapper', array(
+// 				'field'    => 'tw_widget',
+// 				'errors'   => $errors,
+// 				'labels'   => $labels,
+// 				'required' => $required,
+// 				'controls' => Form::input('tw_widget', $orm->tw_widget, array(
+// 					'id'    => 'tw_widget_field',
+// 					'class' => 'input-xlarge',
+// 				)),
+// 			));
+// 		}
 
 /**** vkontakte_link ****/
 
@@ -264,16 +264,16 @@
 	
 /**** odnoklassniki_link ****/
 
-		echo View_Admin::factory('form/wrapper', array(
-			'field'    => 'odnoklassniki_link',
-			'errors'   => $errors,
-			'labels'   => $labels,
-			'required' => $required,
-			'controls' => Form::input('odnoklassniki_link', $orm->odnoklassniki_link, array(
-				'id'    => 'odnoklassniki_link_field',
-				'class' => 'input-xlarge',
-			)),
-		));
+// 		echo View_Admin::factory('form/wrapper', array(
+// 			'field'    => 'odnoklassniki_link',
+// 			'errors'   => $errors,
+// 			'labels'   => $labels,
+// 			'required' => $required,
+// 			'controls' => Form::input('odnoklassniki_link', $orm->odnoklassniki_link, array(
+// 				'id'    => 'odnoklassniki_link_field',
+// 				'class' => 'input-xlarge',
+// 			)),
+// 		));
 
 /**** additional params block ****/
 
