@@ -57,19 +57,6 @@
 			));
 		}
 
-/**** title ****/
-
-		echo View_Admin::factory('form/wrapper', array(
-			'field'    => 'title',
-			'errors'   => $errors,
-			'labels'   => $labels,
-			'required' => $required,
-			'controls' => Form::input('title', $element->title, array(
-				'id'      => 'title_field',
-				'class'   => 'input-xlarge',
-			)),
-		));
-
 /**** code ****/
 
 		if ($ACL->is_allowed($USER, $element, 'add')) {
@@ -85,6 +72,42 @@
 			));
 		}
 		
+/**** title ****/
+
+		echo View_Admin::factory('form/wrapper', array(
+			'field'    => 'title',
+			'errors'   => $errors,
+			'labels'   => $labels,
+			'required' => $required,
+			'controls' => Form::input('title', $element->title, array(
+				'id'      => 'title_field',
+				'class'   => 'input-xlarge',
+			)),
+		));
+
+/**** link ****/
+		
+		echo View_Admin::factory('form/wrapper', array(
+			'field'    => 'link',
+			'errors'   => $errors,
+			'labels'   => $labels,
+			'required' => $required,
+			'controls' => Form::input('link', $element->link, array(
+				'id'      => 'link_field',
+				'class'   => 'input-xlarge',
+			)),
+		));
+		
+/**** image ****/
+		
+		echo View_Admin::factory('form/image_wrapper', array(
+			'field'      => 'image',
+			'orm_helper' => $wrapper,
+			'errors'     => $errors,
+			'labels'     => $labels,
+			'required'   => $required,
+		));
+			
 /**** text ****/
 
 		echo View_Admin::factory('form/wrapper', array(

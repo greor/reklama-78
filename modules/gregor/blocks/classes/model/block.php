@@ -11,6 +11,8 @@ class Model_Block extends ORM_Base {
 			'title'           => 'Title',
 			'code'            => 'Code',
 			'text'            => 'Text',
+			'image'           => 'Image',
+			'link'            => 'Link',
 			'active'          => 'Active',
 		);
 	}
@@ -32,6 +34,14 @@ class Model_Block extends ORM_Base {
 				array( 'not_empty' ),
 				array( 'max_length', array( ':value', 255 ) ),
 			),
+			'image' => array(
+				array( 'max_length', array( ':value', 255 ) ),
+			),
+			'link' => array(
+				array( 'min_length', array( ':value', 3 ) ),
+				array( 'max_length', array( ':value', 255 ) ),
+				array( 'url' ),
+			),
 		);
 	}
 
@@ -52,6 +62,9 @@ class Model_Block extends ORM_Base {
 			),
 			'active' => array(
 				array(array($this, 'checkbox'))
+			),
+			'link' => array(
+				array( 'strip_tags' ),
 			),
 		);
 	}

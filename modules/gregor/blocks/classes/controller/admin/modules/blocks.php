@@ -83,7 +83,7 @@ class Controller_Admin_Modules_Blocks extends Controller_Admin_Front {
 					unset($values['code']);
 				}
 				
-				$wrapper->save($values);
+				$wrapper->save($values + $_FILES);
 
 // 				Controller_Admin_Structure::clear_structure_cache();
 			} catch (ORM_Validation_Exception $e) {
@@ -102,6 +102,26 @@ class Controller_Admin_Modules_Blocks extends Controller_Admin_Front {
 				->set('wrapper', $wrapper);
 		} else {
 			Request::current()->redirect( $list_url );
+		}
+	}
+	
+	public function action_delete()
+	{
+		$id = (int) Request::current()->param('id');
+	
+		$wrapper = ORM_Helper::factory('block');
+		$wrapper->orm()
+			->where('id', '=', $id)
+			->find();
+	
+		if ( ! $wrapper->orm()->loaded() OR ! $this->acl->is_allowed($this->user, $wrapper->orm(), 'add')) {
+			throw new HTTP_Exception_404();
+		}
+	
+		if ($this->delete_element($wrapper)) {
+			Request::current()->redirect(Route::url('modules', array(
+				'controller' => 'blocks',
+			)));
 		}
 	}
 
