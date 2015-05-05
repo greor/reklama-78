@@ -856,12 +856,12 @@
 	}
 	
 	.services-boxes.style-3.icon-left .services-boxes-content {
-		margin-left: 80px;
+		margin-left: 100px;
 	}
 	
 	.services-boxes.style-3.icon-right .services-boxes-content {
 		text-align: right;
-		margin-right: 80px;
+		margin-right: 100px;
 	}
 	
 	.services-boxes.style-3.icon-left .services-boxes-content h3:after {
@@ -1679,4 +1679,19 @@
 			margin: 5px 10px;
 		}
 		
+	}
+	
+	
+/***********************************************************************************
+ *	- DEV STYLES
+ ***********************************************************************************/
+	
+	@media (max-width: 991px) {
+		.services-boxes.style-3.icon-left .services-boxes-content {
+			margin-left: 0;
+		}
+		
+		.services-boxes.style-3.icon-right .services-boxes-content {
+			margin-right: 0;
+		}
 	}

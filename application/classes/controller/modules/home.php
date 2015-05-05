@@ -7,7 +7,9 @@ class Controller_Modules_Home extends Controller_Front {
 	public function action_index() {
 		
 		$this->template
-			->set('promo', $this->_get_promo());
+			->set('promo', $this->_get_promo())
+			->set('services', $this->_get_services())
+		;
 		
 	}
 	
@@ -45,6 +47,34 @@ class Controller_Modules_Home extends Controller_Front {
 		}
 		
 		return $elements;
+	}
+	
+	private function _get_services()
+	{
+		$_services = ORM::factory('service')
+			->find_all();
+		
+		$services = array();
+		$helper = ORM_Helper::factory('service');
+		$url_base = URL::base();
+		$page = Page_Route::page_by_name('service');
+		foreach ($_services as $_row) {
+			$_item = $_row->as_array();
+			
+			if ( ! empty($_item['icon'])) {
+				$_item['icon'] = $url_base.Thumb::uri('service_icon_70', $helper->file_uri('icon', $_item['icon']));
+			}
+			
+			if ( ! empty($page['id'])) {
+				$_item['link'] = $url_base.Page_Route::uri($page['id'], 'service', array(
+					'uri' => $_item['uri']
+				));
+			}
+			
+			$services[] = $_item;
+		}
+		
+		return $services;
 	}
 
 }

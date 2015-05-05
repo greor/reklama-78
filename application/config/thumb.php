@@ -47,4 +47,12 @@ return array(
 		),
 		'quality' => 100
 	),
+	'service_icon_70' => array(
+		'path' => 'upload/images/',
+		'resize' => array(
+			'width' => 80,
+			'master' => Image::WIDTH,
+		),
+		'quality' => 100
+	),
 );
