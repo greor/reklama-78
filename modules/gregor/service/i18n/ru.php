@@ -6,4 +6,5 @@ return array(
 	'Service list' => 'Список услуг',
 	'Add service'   => 'Добавить услугу',
 	'Edit service'  => 'Редактировать услугу',
+	'Icon'  => 'Иконка',
 );

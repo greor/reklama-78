@@ -69,6 +69,16 @@
 			)),
 		));
 
+/**** icon ****/
+
+		echo View_Admin::factory('form/image_wrapper', array(
+			'field'      => 'icon',
+			'orm_helper' => $wrapper,
+			'errors'     => $errors,
+			'labels'     => $labels,
+			'required'   => $required,
+		));
+
 /**** image ****/
 
 		echo View_Admin::factory('form/image_wrapper', array(
@@ -88,7 +98,7 @@
 			'required' => $required,
 			'controls' => Form::textarea('announcement', $element->announcement, array(
 				'id'      => 'announcement_field',
-				'class'   => 'text_editor_native',
+				'class'   => 'text_editor_br',
 			)),
 		));
 		

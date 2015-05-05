@@ -11,6 +11,7 @@ class Model_Service extends ORM_Base {
 		return array(
 			'title'           => 'Title',
 			'uri'             => 'URI',
+			'icon'            => 'Icon',
 			'image'           => 'Image',
 			'announcement'    => 'Announcement',
 			'text'            => 'Text',
@@ -36,6 +37,9 @@ class Model_Service extends ORM_Base {
 				array( 'min_length', array( ':value', 2 ) ),
 				array( 'max_length', array( ':value', 100 ) ),
 				array( 'alpha_dash' ),
+			),
+			'icon' => array(
+				array( 'max_length', array( ':value', 255 ) ),
 			),
 			'image' => array(
 				array( 'max_length', array( ':value', 255 ) ),
