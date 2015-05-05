@@ -13,8 +13,15 @@ class Controller_Modules_Home extends Controller_Front {
 	
 	private function _get_promo()
 	{
+		$_date = date('Y-m-d H:i:s');
 		$_elements = ORM::factory('promo')
+			->where('public_date', '<=', $_date)
+			->and_where_open()
+				->where('hidden_date', '>', $_date)
+				->or_where('hidden_date', '=', '0000-00-00 00:00:00')
+			->and_where_close()
 			->find_all();
+		
 		
 		$elements = array();
 		$helper = ORM_Helper::factory('promo');

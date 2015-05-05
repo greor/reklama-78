@@ -45,7 +45,7 @@
 
 /**** public_date ****/
 		
-		if ( $element->loaded() AND ! empty($element->public_date) ) {
+		if ( $element->loaded() AND Valid::date($element->public_date) ) {
 			$_date_ts = strtotime($element->public_date);
 			$_date_date = date('Y-m-d', $_date_ts);
 			$_date_time = date('H:i', $_date_ts);
@@ -68,7 +68,7 @@
 
 /**** hidden_date ****/
 		
-		if ( $element->loaded() AND ! empty($element->hidden_date) ) {
+		if ( $element->loaded() AND Valid::date($element->hidden_date)) {
 			$_date_ts = strtotime($element->hidden_date);
 			$_date_date = date('Y-m-d', $_date_ts);
 			$_date_time = date('H:i', $_date_ts);
