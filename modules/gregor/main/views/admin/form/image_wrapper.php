@@ -56,15 +56,15 @@
 				
 				echo '</div>';
 				
+				if ( empty($image_only) OR $image_only !== TRUE) {
+					echo '<label class="checkbox" for="', $field, '_field_delete">';
+					echo Form::checkbox('delete_fields['.$field.']', '1', FALSE, array(
+						'id' => $field.'_field_delete',
+					)), __('Delete image');
+					echo '</label>';
+				}
 			}
 			
-			if ( empty($image_only) OR $image_only !== TRUE) {
-				echo '<label class="checkbox" for="', $field, '_field_delete">';
-				echo Form::checkbox('delete_fields['.$field.']', '1', FALSE, array(
-					'id' => $field.'_field_delete',
-				)), __('Delete image');
-				echo '</label>';
-			}
 			
 ?>
 		</div>
