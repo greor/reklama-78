@@ -20,7 +20,7 @@
 						echo '<h1>', HTML::chars($block['title']), '</h1>';
 					} 
 					if ( ! empty($block['text'])) {
-						echo $block['text'];
+						echo '<div class="info-text">', $block['text'], '</div>';
 					} 
 					if ( ! empty($block['link'])) {
 						echo HTML::anchor($block['link'], 'Подробнее', array(
