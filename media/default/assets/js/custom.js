@@ -361,19 +361,7 @@
 	
 	// BxSLIDER //
 	s.bxSlider = function(){
-		$(".info-slider ul").bxSlider({
-			mode: 'fade',
-			speed: 800,
-			infiniteLoop: true,
-			hideControlOnEnd: false,
-			pager: true,
-			pagerType: 'full',
-			controls: false,
-			auto: true,
-			pause: 5000,
-			autoHover: true,
-			useCSS: false
-		});
+		
 		
 		$(".testimonial-slider ul").bxSlider({
 			mode: 'fade',

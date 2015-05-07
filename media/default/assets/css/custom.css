@@ -2787,6 +2787,25 @@
 	font-weight: 600;
 }
 
+.promo-holder .bx-wrapper .bx-prev {
+	left: auto;
+	right: 32px;
+	top: 0;
+	margin-top: 0;
+}
+.promo-holder .bx-wrapper .bx-next {
+	top: 0;
+	margin-top: 0;
+}
+.promo-holder .headline.style-1 strong {
+	color: #bca480;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 3px;
+    line-height: 20px;
+}
+
+
 @media (max-width: 991px) {
 	.services-boxes .service-icon {
 		display: none;

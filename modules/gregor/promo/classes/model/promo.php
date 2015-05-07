@@ -43,6 +43,7 @@ class Model_Promo extends ORM_Base {
 				array( 'max_length', array( ':value', 255 ) ),
 			),
 			'image' => array(
+				array( 'not_empty' ),
 				array( 'max_length', array( ':value', 255 ) ),
 			),
 			'position' => array(

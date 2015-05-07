@@ -117,14 +117,14 @@
 
 /**** background ****/
 
-		echo View_Admin::factory('form/image_wrapper', array(
-			'field'      => 'background',
-			'orm_helper' => $wrapper,
-			'errors'     => $errors,
-			'labels'     => $labels,
-			'required'   => $required,
-			'help_text'  => '1920x635px'
-		));
+// 		echo View_Admin::factory('form/image_wrapper', array(
+// 			'field'      => 'background',
+// 			'orm_helper' => $wrapper,
+// 			'errors'     => $errors,
+// 			'labels'     => $labels,
+// 			'required'   => $required,
+// 			'help_text'  => '1920x635px'
+// 		));
 		
 /**** image ****/
 
@@ -134,7 +134,7 @@
 			'errors'     => $errors,
 			'labels'     => $labels,
 			'required'   => $required,
-			'help_text'  => '786x449px'
+			'help_text'  => '560x325px'
 		));
 
 /**** text ****/
@@ -152,11 +152,11 @@
 
 /**** settings ****/
 		
-		echo View_Admin::factory('form/revolution_settings', array(
-			'field'    => 'settings',
-			'labels'   => $labels,
-			'values'   => $element->settings
-		));
+// 		echo View_Admin::factory('form/revolution_settings', array(
+// 			'field'    => 'settings',
+// 			'labels'   => $labels,
+// 			'values'   => $element->settings
+// 		));
 
 ?>
 	<div class="form-actions">

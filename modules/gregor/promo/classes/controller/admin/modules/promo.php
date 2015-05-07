@@ -103,7 +103,7 @@ class Controller_Admin_Modules_Promo extends Controller_Admin_Front {
 				
 				
 				$values = Request::current()->post();
-				$values['settings'] = serialize($values['settings']);
+// 				$values['settings'] = serialize($values['settings']);
 				
 				$wrapper->save($values + $_FILES);
 

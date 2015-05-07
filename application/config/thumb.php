@@ -34,16 +34,16 @@ return array(
 		),
 		'quality' => 100
 	),
-	'promo_786x449' => array(
+	'promo_560x325' => array(
 		'path' => 'upload/images/',
 		'resize' => array(
-			'width' => 786,
-			'height' => 449,
+			'width' => 560,
+			'height' => 325,
 			'master' => Image::INVERSE,
 		),
 		'crop' => array(
-			'width' => 786,
-			'height' => 449,
+			'width' => 560,
+			'height' => 325,
 		),
 		'quality' => 100
 	),
