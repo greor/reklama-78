@@ -2716,14 +2716,21 @@
 	position: relative;
 	z-index: 1;
 	display: block;
-}
-.info-box > * {
-	position: relative;
-	z-index: 1;
 	color: #fff;
 }
 .info-box h4 {
 	color: #FFFF00;
+}
+
+.info-text {
+	margin-bottom: 20px;
+}
+
+/*
+.info-box > * {
+	position: relative;
+	z-index: 1;
+	color: #fff;
 }
 .info-box:before {
 	display: block;
@@ -2738,6 +2745,7 @@
 	opacity: 0.55;
 	z-index: 1;
 }
+*/
 
 .services-boxes.fadeInRight .service-icon {
 	float: left;
@@ -2762,6 +2770,21 @@
 
 .clients-list li img {
 	margin: 0 auto;
+}
+
+.welcome-block {
+	text-align: center;
+}
+
+.welcome-block h1 {
+	/*color: #ffff00;*/
+}
+
+.welcome-text {
+	text-transform: uppercase;
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: 600;
 }
 
 @media (max-width: 991px) {

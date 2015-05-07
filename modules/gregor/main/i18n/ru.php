@@ -152,4 +152,6 @@ return array(
 	"':field' must not relate to oneself" => "':field' не может ссылаться на себя",
 	'Page with this url already exist' => 'Страница с таким URL уже существует',
 	'Page type value must be input.' => 'Страница не может ссылаться сама на себя, либо некорректный url',
+	
+	'Learn more' => 'Узнать больше',
 );
