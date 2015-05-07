@@ -106,6 +106,7 @@
 			'errors'     => $errors,
 			'labels'     => $labels,
 			'required'   => $required,
+			'help_text'  => $element->help_text
 		));
 			
 /**** text ****/

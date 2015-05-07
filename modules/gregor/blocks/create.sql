@@ -7,6 +7,7 @@ CREATE TABLE `prefix_blocks` (
 	`link` VARCHAR(255) NOT NULL DEFAULT '',
 	`text` TEXT NOT NULL,
 	`active` TINYINT(1) UNSIGNED NOT NULL DEFAULT '0',
+	`help_text` VARCHAR(255) NOT NULL,
 	PRIMARY KEY (`id`)
 )
 COLLATE='utf8_general_ci'
