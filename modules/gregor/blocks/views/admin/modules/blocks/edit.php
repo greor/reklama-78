@@ -118,7 +118,7 @@
 			'required' => $required,
 			'controls' => Form::textarea('text', $element->text, array(
 				'id'      => 'text_field',
-				'class'   => 'text_editor',
+				'class'   => 'text_editor_br',
 			)),
 		));
 
