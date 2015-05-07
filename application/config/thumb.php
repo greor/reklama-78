@@ -48,11 +48,24 @@ return array(
 		'quality' => 100
 	),
 	'service_icon_70' => array(
-		'path' => 'upload/images/',
 		'resize' => array(
 			'width' => 80,
 			'master' => Image::WIDTH,
 		),
+		'quality' => 100
+	),
+	'clients_195x195' => array(
+		'path' => 'upload/images/',
+		'resize' => array(
+			'width' => 195,
+			'height' => 195,
+			'master' => Image::INVERSE,
+		),
+		'crop' => array(
+			'width' => 195,
+			'height' => 195,
+		),
+		'path' => 'upload/images/',
 		'quality' => 100
 	),
 );

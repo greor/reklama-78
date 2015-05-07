@@ -32,7 +32,7 @@ class Controller_Admin_Modules_Clients extends Controller_Admin_Front {
 		$paginator_orm = clone $orm;
 		$paginator = new Paginator('admin/layout/paginator');
 		$paginator
-			->per_page(20)
+			->per_page(10)
 			->count( $paginator_orm->count_all() );
 		unset($paginator_orm);
 

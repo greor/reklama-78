@@ -669,7 +669,7 @@
 	});
 	
 	// WINDOW RESIZE //
-	$(window).resize(function(e) {
+	$(window).smartresize(function(e) {
 		s.mobile_menu();
 		s.full_screen();
 	});

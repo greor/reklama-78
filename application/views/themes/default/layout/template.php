@@ -81,6 +81,7 @@
 	<a id="go-top"><i class="miu-icon-circle_arrow-up_glyph"></i></a>
 
 	<script src="<?php echo $MEDIA; ?>assets/js/jquery-2.1.3.min.js" type="text/javascript"></script>
+	<script src="<?php echo $MEDIA; ?>assets/js/smartresize.js" type="text/javascript"></script>
 	<script src="<?php echo $MEDIA; ?>assets/js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="<?php echo $MEDIA; ?>assets/js/viewport/jquery.viewport.js" type="text/javascript"></script>
 	<script src="<?php echo $MEDIA; ?>assets/js/menu/hoverIntent.js" type="text/javascript"></script>
