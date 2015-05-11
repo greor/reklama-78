@@ -160,4 +160,5 @@ return array(
 	'Submit' => 'Отправить',
 	'New on the site' => 'Новое на сайте',
 	'More' => 'Еще',
+	'Continue reading' => 'Продолжить чтение',
 );

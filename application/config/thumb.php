@@ -96,7 +96,7 @@ return array(
 		'path' => 'upload/images/',
 		'quality' => 100
 	),
-	'service_850' => array(
+	'post_850' => array(
 		'path' => 'upload/images/',
 		'resize' => array(
 			'width' => 850,
