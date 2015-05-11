@@ -67,8 +67,8 @@
 					<div class="row">
 <?php
 						echo View_Theme::factory('menu/bottom', array('menu' => $menu)); 
-						echo View_Theme::factory('layout/about'); 
-						echo View_Theme::factory('layout/contacts'); 
+						echo View_Theme::factory('layout/blocks/about'); 
+						echo View_Theme::factory('layout/blocks/contacts'); 
 ?>
 					</div>
 				</div>
