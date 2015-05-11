@@ -2,6 +2,21 @@
 
 	echo View_Theme::factory('layout/breadcrumbs');
 	
+	if ( ! empty($page['text'])):
+?>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="headline style-1">
+					<div class="page-text"><?php echo $page['text']; ?></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+<?php 
+	endif;
 	foreach ($service as $_item):
 ?>
 
