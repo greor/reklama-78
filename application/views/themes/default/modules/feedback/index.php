@@ -1,4 +1,8 @@
-<?php defined('SYSPATH') or die('No direct script access.');?>
+<?php defined('SYSPATH') or die('No direct script access.');
+
+	echo View_Theme::factory('layout/breadcrumbs');
+	
+?>
 
  	<div class="container">
 		<div class="row">

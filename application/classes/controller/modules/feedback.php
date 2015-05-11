@@ -19,7 +19,13 @@ class Controller_Modules_Feedback extends Controller_Front {
 
 	public function action_index()
 	{
+		$this->breadcrumbs[] = array(
+			'title' => $this->request->page['title']
+		);
+		$this->breadcrumbs_title = $this->request->page['title'];
+		
 		$response = Session::instance()->get('contacts_form', array());
+		Session::instance()->delete('contacts_form');
 		
 		$page = ORM::factory('page', $this->page_id);
 		$action_link = URL::base().Page_Route::uri($this->page_id, 'feedback', array(

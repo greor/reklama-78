@@ -12,6 +12,8 @@ class Controller_Front extends Controller_Template {
 	/* Template vars */
 	protected $body_class = '';
 	protected $title;
+	protected $breadcrumbs = array();
+	protected $breadcrumbs_title = '';
 	protected $page_meta;
 	protected $page_header = array();
 	protected $open_graph = array();
@@ -86,6 +88,8 @@ class Controller_Front extends Controller_Template {
 		View::set_global('_0_GIF', $this->_0_gif );
 		View::set_global('PAGE_ID', $this->page_id );
 		View::set_global('SITE', $this->site);
+		View::set_global('BREADCRUMBS', $this->breadcrumbs);
+		View::set_global('BREADCRUMBS_TITLE', $this->breadcrumbs_title);
 
 		if (Request::current()->is_initial()) {
 			if ($this->auto_render === TRUE AND ! $this->without_layout) {
