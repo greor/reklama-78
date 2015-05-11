@@ -64,6 +64,7 @@
 			'errors'     => $errors,
 			'labels'     => $labels,
 			'required'   => $required,
+			'help_text'  => '195x195px',
 		));
 
 ?>

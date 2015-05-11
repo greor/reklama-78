@@ -68,4 +68,18 @@ return array(
 		'path' => 'upload/images/',
 		'quality' => 100
 	),
+	'projects_195x195' => array(
+		'path' => 'upload/images/',
+		'resize' => array(
+			'width' => 195,
+			'height' => 195,
+			'master' => Image::INVERSE,
+		),
+		'crop' => array(
+			'width' => 195,
+			'height' => 195,
+		),
+		'path' => 'upload/images/',
+		'quality' => 100
+	),
 );

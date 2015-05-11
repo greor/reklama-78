@@ -10,6 +10,7 @@ class Controller_Modules_Home extends Controller_Front {
 			->set('promo', $this->_get_promo())
 			->set('services', $this->_get_services())
 			->set('clients', $this->_get_clients())
+			->set('projects', $this->_get_projects())
 		;
 		
 	}
@@ -99,5 +100,28 @@ class Controller_Modules_Home extends Controller_Front {
 		}
 		
 		return $clients;
+	}
+
+	private function _get_projects()
+	{
+		$_projects = ORM::factory('project')
+			->find_all();
+		
+		$projects = array();
+		$helper = ORM_Helper::factory('project');
+		foreach ($_projects as $_row) {
+			$_item = $_row->as_array();
+			
+			if ( ! empty($_item['image'])) {
+				$_item['image'] = Thumb::uri('projects_195x195', $helper->file_uri('image', $_item['image']));
+			}
+			$projects[] = $_item;
+		}
+		
+		if ( ! empty($projects)) {
+			$this->switch_on_plugin('bxslider');
+		}
+		
+		return $projects;
 	}
 }
