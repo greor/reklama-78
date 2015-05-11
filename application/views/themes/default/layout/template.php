@@ -40,7 +40,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-2">
-                        <a id="logo" href="index-slider.html">
+                        <a id="logo" href="<?php echo URL::base(); ?>">
                             <img src="<?php echo $MEDIA; ?>images/backgrounds/logo.png" alt="">
                         </a>
                     </div>
