@@ -11,6 +11,15 @@
 	s.dom = {};
 	s.dom.body = $('body');
 	
+	s.subString = function(data, from, to){
+		var start_pos = data.indexOf(from)+from.length,
+			end_pos = data.lastIndexOf(to);
+		if (start_pos > -1 && end_pos > start_pos) {
+			return data.substring(start_pos, end_pos);
+		}
+		return false;
+	};
+	
 	// DETECT TOUCH DEVICE //
 	s.is_touch_device = function(){
 		return !!('ontouchstart' in window) || ( !! ('onmsgesturechange' in window) && !! window.navigator.maxTouchPoints);
@@ -596,7 +605,7 @@
 		s.mobile_menu();
 		
 		// LOAD MORE PORTFOLIO ITEMS //
-		s.load_more_projects();
+//		s.load_more_projects();
 		
 		// PARALLAX //
 //		s.parallax();

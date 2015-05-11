@@ -159,4 +159,5 @@ return array(
 	'Contacts' => 'Контакты',
 	'Submit' => 'Отправить',
 	'New on the site' => 'Новое на сайте',
+	'More' => 'Еще',
 );

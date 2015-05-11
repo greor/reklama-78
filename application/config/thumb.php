@@ -105,4 +105,22 @@ return array(
 		'path' => 'upload/images/',
 		'quality' => 100
 	),
+	'isotope_360' => array(
+		'path' => 'upload/images/',
+		'resize' => array(
+			'width' => 360,
+			'master' => Image::WIDTH,
+		),
+		'path' => 'upload/images/',
+		'quality' => 100
+	),
+	'detail_555' => array(
+		'path' => 'upload/images/',
+		'resize' => array(
+			'width' => 555,
+			'master' => Image::WIDTH,
+		),
+		'path' => 'upload/images/',
+		'quality' => 100
+	),
 );
