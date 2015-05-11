@@ -12,7 +12,8 @@
 	
 	echo View_Theme::factory('modules/home/modules/clients', array('elements' => $clients));
 	
+	echo View_Theme::factory('modules/home/blocks/fun');
+	
 	echo View_Theme::factory('modules/home/modules/elements', array('elemenets' => $elemenets))
 
 ?>
-

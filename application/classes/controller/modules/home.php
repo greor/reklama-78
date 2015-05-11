@@ -6,6 +6,8 @@ class Controller_Modules_Home extends Controller_Front {
 
 	public function action_index() {
 		
+		$this->switch_on_plugin('counter');
+		
 		$this->template
 			->set('promo', $this->_get_promo())
 			->set('services', $this->_get_services())

@@ -272,39 +272,6 @@
 		});
 	};
 	
-	// LOAD MORE PROJECTS //
-	s.load_more_projects = function(){
-		var number_clicks = 0;
-		$(".load-more").on("click", function(e) {
-			e.preventDefault();
-			if (number_clicks == 0) {
-				$.ajax({
-					type: "POST",
-					url: $(".load-more").attr("href"),
-					dataType: "html",
-					cache: false,
-					msg : '',
-					success: function(msg) {
-						$(".isotope").append(msg);	
-						$(".isotope").imagesLoaded(function() {
-							$(".isotope").isotope("reloadItems").isotope();
-							$(".fancybox-portfolio-gallery").attr("rel","group").fancybox({
-								prevEffect: 'none',
-								nextEffect: 'none'
-							});
-							$(".fancybox-blog-gallery").attr("rel","group").fancybox({
-								prevEffect: 'none',
-								nextEffect: 'none'
-							});
-						});
-						number_clicks++;
-						$(".load-more").html("No more project");
-					}
-				});
-			}
-		});
-	};
-	
 	// SHOW/HIDE GO TOP //
 	s.show_hide_go_top = function(){
 		if ($(window).scrollTop() > $(window).height()/2) {
@@ -368,213 +335,6 @@
 		});
 	};
 	
-	// BxSLIDER //
-	s.bxSlider = function(){
-		
-		
-		$(".testimonial-slider ul").bxSlider({
-			mode: 'fade',
-			speed: 800,
-			infiniteLoop: true,
-			hideControlOnEnd: false,
-			pager: true,
-			pagerType: 'full',
-			controls: false,
-			auto: false,
-			pause: 4000,
-			autoHover: true,
-			useCSS: false,
-			pagerCustom: '#thumb-pager'
-		});
-		
-		$(".testimonial-slider-2 ul").bxSlider({
-			mode: 'fade',
-			speed: 800,
-			infiniteLoop: true,
-			hideControlOnEnd: false,
-			pager: true,
-			pagerType: 'full',
-			controls: false,
-			auto: false,
-			pause: 4000,
-			autoHover: true,
-			useCSS: false
-		});
-		
-		$(".project-slider ul").bxSlider({
-			mode: 'fade',
-			speed: 800,
-			infiniteLoop: true,
-			hideControlOnEnd: false,
-			pager: true,
-			pagerType: 'full',
-			controls: false,
-			auto: false,
-			pause: 4000,
-			autoHover: true,
-			useCSS: false,
-			pagerCustom: '#project-slider-control'
-		});
-		
-		$(".images-slider ul").bxSlider({
-			mode: 'horizontal',
-			speed: 800,
-			infiniteLoop: true,
-			hideControlOnEnd: false,
-			pager: true,
-			pagerType: 'full',
-			controls: false,
-			auto: true,
-			pause: 4000,
-			autoHover: true,
-			useCSS: false
-		});
-		
-		$(".images-slider-2 ul").bxSlider({
-			mode: 'horizontal',
-			speed: 800,
-			infiniteLoop: true,
-			hideControlOnEnd: false,
-			pager: false,
-			pagerType: 'full',
-			controls: true,
-			auto: true,
-			pause: 4000,
-			autoHover: true,
-			useCSS: false
-		});
-	};
-	
-	// GOOGLE MAPS //
-	s.gMaps = function(){
-		$(".map").gMap({
-			maptype: 'ROADMAP',
-			scrollwheel: false,
-			zoom: 11,
-			markers: [{
-				address: 'San Jose, California, USA',
-				html: 'MILO Office'
-			}],
-			controls: {
-				panControl: true,
-				zoomControl: true,
-				mapTypeControl: true,
-				scaleControl: false,
-				streetViewControl: false,
-				overviewMapControl: false
-			}
-		});
-	};
-	
-	// ISOTOPE //
-	s.isotope = function(){
-		$(".isotope").imagesLoaded( function() {
-			
-			var container = $(".isotope");
-			
-			container.isotope({
-				itemSelector: '.isotope-item',
-				layoutMode: 'masonry',
-				transitionDuration: '0.8s'
-			});
-			
-			$(".filter li a").on("click", function () {
-				$(".filter li a").removeClass("active");
-				$(this).addClass("active");
-	
-				var selector = $(this).attr("data-filter");
-				container.isotope({
-					filter: selector
-				});
-	
-				return false;
-			});
-	
-			$("body").resize(function () {
-				container.isotope();
-			});
-		});
-	};
-	
-	// CONTACT FORM VALIDATE & SUBMIT //
-	// VALIDATE //
-	s.forms = function(){
-		$("#contact-form").validate({
-			rules: {
-				name: {
-					required: true
-				},
-				email: {
-					required: true,
-					email: true
-				},
-				subject: {
-					required: true
-				},
-				message: {
-					required: true,
-					minlength: 10
-				}
-			},
-			messages: {
-				name: {
-					required: "Please enter your name!"
-				},
-				email: {
-					required: "Please enter your email!",
-					email: "Please enter a valid email address"
-				},
-				subject: {
-					required: "Please enter the subject!"
-				},
-				message: {
-					required: "Please enter your message!"
-				}
-			},
-				
-			// SUBMIT //
-			submitHandler: function(form) {
-				var result;
-				$(form).ajaxSubmit({
-					type: "POST",
-					data: $(form).serialize(),
-					url: "assets/php/send.php",
-					success: function(msg) {
-						
-						if (msg == 'OK') {
-							result = '<div class="alert alert-success">Your message was successfully sent!</div>';
-							$("#contact-form").clearForm();
-						} else {
-							result = msg;
-						}
-						
-						$("#alert-area").html(result);
-	
-					},
-					error: function() {
-	
-						result = '<div class="alert alert-danger">There was an error sending the message!</div>';
-						$("#alert-area").html(result);
-	
-					}
-				});
-			}
-		});
-	};
-	
-	// PARALLAX //
-	s.parallax = function(){
-		if ( ! s.is_touch_device()) {
-			$('.parallax').parallaxScroll({
-				friction: 0
-			});
-		}
-	};
-	
-	s.youtube = function(){
-		// YOUTUBE PLAYER //
-		$(".youtube-player").mb_YTPlayer();
-	};
 	
 	// DOCUMENT READY //
 	$(document).ready(function(){
@@ -603,12 +363,6 @@
 		
 		// MOBILE MENU //
 		s.mobile_menu();
-		
-		// LOAD MORE PORTFOLIO ITEMS //
-//		s.load_more_projects();
-		
-		// PARALLAX //
-//		s.parallax();
 		
 		// SHOW/HIDE GO TOP
 		s.show_hide_go_top();
@@ -645,10 +399,6 @@
 	// WINDOW SCROLL //
 	$(window).scroll(function(){
 		
-//		s.progress_bars();
-//		s.pie_chart();
-//		s.counter();
-//		s.animate_charts();
 		s.show_hide_go_top();
 		
 		if ($(this).scrollTop() > 200){  
