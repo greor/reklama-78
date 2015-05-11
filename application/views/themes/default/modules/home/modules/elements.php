@@ -19,19 +19,12 @@
 						<div class="isotope-item">
 							<div class="blog-article wow fadeIn">
 <?php
-							if ( ! empty($_item['image']) AND is_array($_item['image'])):
-?>						
-								<div class="blog-article-thumbnail"> 
-									<img src="<?php echo $MEDIA; ?>images/blog/image-8.jpg" alt="">                                
-									<div class="blog-article-hover">
-										<a class="fancybox-blog-gallery zoom-action" href="images/blog/image-8.jpg">
-											<i class="fa fa-eye"></i>
-										</a>
-									</div>
-								</div>
-<?php
-							endif; 
-?>							
+							if ( ! empty($_item['image'])) {
+								echo '<div class="blog-article-thumbnail">', HTML::image($_item['image'], array(
+									'alt' => $_item['title']
+								)), '</div>';
+							}
+?>		
 								<div class="blog-article-details">
 									<h6>
 <?php

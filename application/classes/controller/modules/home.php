@@ -129,9 +129,9 @@ class Controller_Modules_Home extends Controller_Front {
 	private function _get_elements()
 	{
 		
-		$news = $this->_get_news();
-		$actions = $this->_get_actions();
-		$posts = $this->_get_posts();
+		$news = $this->_get_news(5);
+		$actions = $this->_get_actions(5);
+		$posts = $this->_get_posts(5);
 		
 		$elements = array_merge_recursive($news, $actions, $posts);
 		
@@ -161,11 +161,16 @@ class Controller_Modules_Home extends Controller_Front {
 		));
 		
 		$news = array();
+		$helper = ORM_Helper::factory('news');
 		foreach ($_news as $_row) {
 			$_item = $_row->as_array();
 			$_item['element_type'] = 'news';
 			$_item['list_link'] = $list_link;
 			$_item['link'] = str_replace('{uri}', $_row->uri, $link_tpl);
+			
+			if ( ! empty($_item['image'])) {
+				$_item['image'] = URL::base().Thumb::uri('isotope_360', $helper->file_uri('image', $_item['image']));
+			}
 			
 			$news[$_row->public_date][] = $_item;
 		}
@@ -197,6 +202,7 @@ class Controller_Modules_Home extends Controller_Front {
 		));
 		
 		$actions = array();
+		$helper = ORM_Helper::factory('action');
 		foreach ($_actions as $_row) {
 			$_item = $_row->as_array();
 			$_item['element_type'] = 'actions';
@@ -207,6 +213,10 @@ class Controller_Modules_Home extends Controller_Front {
 			), array(
 				date('Ymd', strtotime($_row->public_date)), $_row->uri
 			), $link_tpl);
+			
+			if ( ! empty($_item['image'])) {
+				$_item['image'] = URL::base().Thumb::uri('isotope_360', $helper->file_uri('image', $_item['image']));
+			}
 			
 			$actions[$_row->public_date][] = $_item;
 		}
@@ -231,11 +241,16 @@ class Controller_Modules_Home extends Controller_Front {
 		));
 		
 		$posts = array();
+		$helper = ORM_Helper::factory('post');
 		foreach ($_posts as $_row) {
 			$_item = $_row->as_array();
 			$_item['element_type'] = 'blog';
 			$_item['list_link'] = $list_link;
 			$_item['link'] = str_replace('{uri}', $_row->uri, $link_tpl);
+			
+			if ( ! empty($_item['image'])) {
+				$_item['image'] = URL::base().Thumb::uri('isotope_360', $helper->file_uri('image', $_item['image']));
+			}
 			
 			$posts[$_row->public_date][] = $_item;
 		}
