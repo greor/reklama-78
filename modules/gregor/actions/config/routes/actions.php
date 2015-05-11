@@ -3,6 +3,7 @@
 return array (
 	'actions'	=>	array(
 		'uri_callback'	=>	'(/<date>-<uri>)(?<query>)',
+		'regex' => array('date' => '\d{8}'),
 		'defaults'	=>	array(
 			'directory'		=> 'modules',
 			'controller'	=> 'actions',

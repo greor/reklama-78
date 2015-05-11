@@ -202,11 +202,10 @@ class Controller_Modules_Home extends Controller_Front {
 			$_item['element_type'] = 'actions';
 			
 			$_item['list_link'] = $list_link;
-			$_public_date = explode(' ', $_row->public_date);
 			$_item['link'] = str_replace(array(
 				'{date}', '{uri}'
 			), array(
-				$_public_date[0], $_row->uri
+				date('Ymd', strtotime($_row->public_date)), $_row->uri
 			), $link_tpl);
 			
 			$actions[$_row->public_date][] = $_item;
