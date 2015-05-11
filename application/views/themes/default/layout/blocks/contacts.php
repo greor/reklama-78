@@ -8,7 +8,6 @@
 	}
 ?>
 
-<div class="col-sm-3">
 	<div class="widget widget-contact">
 		<h3 class="widget-title"><?php echo __('Contacts'); ?></h3>
 		<ul>
@@ -21,7 +20,9 @@
 			$_email = explode(' ', $_text);
 			if ( ! empty($_email)) {
 				foreach ($_email as & $_v) {
-					$_v = HTML::mailto(strip_tags($_v));
+					$_v = HTML::mailto(strip_tags($_v), NULL, array(
+						'class' => 'email-link'
+					));
 				}
 				
 				echo '<li><span>', HTML::chars($email_block['title']), '</span>', implode('<br>', $_email), '</li>';
@@ -30,4 +31,3 @@
 ?>		
 		</ul>
 	</div>
-</div>

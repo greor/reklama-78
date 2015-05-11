@@ -11,4 +11,5 @@ return array(
 	'Message text' => 'Текст сообщения',
 	'This message was send from feedback form' => 'Сообщение отправлено с сайта',
 	'feedback message' => 'сообщение формы обратной связи',
+	'Invalid code' => 'Неверный защитный код',
 );

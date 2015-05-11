@@ -2811,6 +2811,31 @@
 .blog-text p {
 	margin-bottom: 0;
 }	
+.page-text {
+	margin-bottom: 20px;
+}
+.page-text p {
+	margin-bottom: 0;
+}	
+
+.contacts-holder .email-link {
+	color: #000;
+} 
+
+.captcha-holder {
+	margin-bottom: 20px;
+}
+.captcha-holder input{
+	display: inline-block;
+	margin-left: 10px;
+}
+.captcha-holder img {
+	cursor: pointer;
+}
+
+.form-holder .alert::after {
+	display: none !important;
+}
 
 @media (max-width: 991px) {
 	.services-boxes .service-icon {

@@ -68,7 +68,9 @@
 <?php
 						echo View_Theme::factory('menu/bottom', array('menu' => $menu)); 
 						echo View_Theme::factory('layout/blocks/about'); 
-						echo View_Theme::factory('layout/blocks/contacts'); 
+						
+						
+						echo '<div class="col-sm-3">', View_Theme::factory('layout/blocks/contacts'), '</div>'; 
 ?>
 					</div>
 				</div>

@@ -157,4 +157,5 @@ return array(
 	'Read more' => 'Подробнее',
 	'Action' => 'Акция',
 	'Contacts' => 'Контакты',
+	'Submit' => 'Отправить',
 );

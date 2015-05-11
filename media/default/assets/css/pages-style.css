@@ -1395,13 +1395,9 @@
 	
 	#contact-form input[type="text"],
 	#contact-form textarea {
-		margin-bottom: 20px;
+		margin-top: 20px;
 		border: none;
 		border-bottom: 1px solid #d7d7d7;
-	}
-	
-	#contact-form textarea {
-		margin-bottom: 40px;
 	}
 	
 	#contact-form input[type="text"]:focus,
