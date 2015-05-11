@@ -34,9 +34,9 @@ Route::set('admin_error', 'admin/error/<action>(/<message>)', array('action' => 
 		'controller' => 'error'
 	));
 
-Route::set('utils', 'utils(/<action>(/<id>))(?<query>)')
+Route::set('widgets', 'widgets/<controller>(/<action>(/<id>))(?<query>)')
 	->defaults(array(
-		'controller' => 'utils',
+		'directory'	 =>	'widgets',
 		'action'     => 'index',
 	));
 

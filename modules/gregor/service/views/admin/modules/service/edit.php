@@ -87,6 +87,7 @@
 			'errors'     => $errors,
 			'labels'     => $labels,
 			'required'   => $required,
+			'help_text'  => '555x300px',
 		));
 
 /**** announcement ****/

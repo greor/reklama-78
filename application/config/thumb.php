@@ -82,4 +82,27 @@ return array(
 		'path' => 'upload/images/',
 		'quality' => 100
 	),
+	'service_555x300' => array(
+		'path' => 'upload/images/',
+		'resize' => array(
+			'width' => 555,
+			'height' => 300,
+			'master' => Image::INVERSE,
+		),
+		'crop' => array(
+			'width' => 555,
+			'height' => 300,
+		),
+		'path' => 'upload/images/',
+		'quality' => 100
+	),
+	'service_850' => array(
+		'path' => 'upload/images/',
+		'resize' => array(
+			'width' => 850,
+			'master' => Image::WIDTH,
+		),
+		'path' => 'upload/images/',
+		'quality' => 100
+	),
 );
