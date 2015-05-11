@@ -11,6 +11,7 @@ class Controller_Modules_Home extends Controller_Front {
 			->set('services', $this->_get_services())
 			->set('clients', $this->_get_clients())
 			->set('projects', $this->_get_projects())
+			->set('elemenets', $this->_get_elements())
 		;
 		
 	}
@@ -124,4 +125,123 @@ class Controller_Modules_Home extends Controller_Front {
 		
 		return $projects;
 	}
+	
+	private function _get_elements()
+	{
+		
+		$news = $this->_get_news();
+		$actions = $this->_get_actions();
+		$posts = $this->_get_posts();
+		
+		$elements = array_merge_recursive($news, $actions, $posts);
+		
+		if ( ! empty($elements)) {
+			krsort($elements);
+			$this->switch_on_plugin('isotope');
+		}
+		
+		return $elements;
+	}
+	
+	private function _get_news($limit = 3) {
+		$_page = Page_Route::page_by_name('news');
+		if (empty($_page['id'])) {
+			return array();
+		}
+		
+		$_date = date('Y-m-d H:i:s');
+		$_news = ORM::factory('news')
+			->where('public_date', '<=', $_date)
+			->where('uri', '!=', '')
+			->find_all();
+		
+		$list_link = URL::base().Page_Route::uri($_page['id'], 'news');
+		$link_tpl = URL::base().Page_Route::uri($_page['id'], 'news', array(
+			'uri' => '{uri}'
+		));
+		
+		$news = array();
+		foreach ($_news as $_row) {
+			$_item = $_row->as_array();
+			$_item['element_type'] = 'news';
+			$_item['list_link'] = $list_link;
+			$_item['link'] = str_replace('{uri}', $_row->uri, $link_tpl);
+			
+			$news[$_row->public_date][] = $_item;
+		}
+		
+		return $news;
+	}
+	
+	private function _get_actions($limit = 3) {
+		$_page = Page_Route::page_by_name('actions');
+		if (empty($_page['id'])) {
+			return array();
+		}
+		
+		$_date = date('Y-m-d H:i:s');
+		$_actions = ORM::factory('action')
+			->where('public_date', '<=', $_date)
+			->and_where_open()
+				->where('hidden_date', '>', $_date)
+				->or_where('hidden_date', '=', '0000-00-00 00:00:00')
+			->and_where_close()
+			->where('uri', '!=', '')
+			->where('public_date', '!=', '0000-00-00 00:00:00')
+			->find_all();
+		
+		$list_link = URL::base().Page_Route::uri($_page['id'], 'actions');
+		$link_tpl = URL::base().Page_Route::uri($_page['id'], 'actions', array(
+			'date' => '{date}',
+			'uri' => '{uri}',
+		));
+		
+		$actions = array();
+		foreach ($_actions as $_row) {
+			$_item = $_row->as_array();
+			$_item['element_type'] = 'actions';
+			
+			$_item['list_link'] = $list_link;
+			$_public_date = explode(' ', $_row->public_date);
+			$_item['link'] = str_replace(array(
+				'{date}', '{uri}'
+			), array(
+				$_public_date[0], $_row->uri
+			), $link_tpl);
+			
+			$actions[$_row->public_date][] = $_item;
+		}
+		
+		return $actions;
+	}
+	
+	private function _get_posts($limit = 3) {
+		$_page = Page_Route::page_by_name('blog');
+		if (empty($_page['id'])) {
+			return array();
+		}
+		
+		$_date = date('Y-m-d H:i:s');
+		$_posts = ORM::factory('post')
+			->where('public_date', '<=', $_date)
+			->find_all();
+		
+		$list_link = URL::base().Page_Route::uri($_page['id'], 'blog');
+		$link_tpl = URL::base().Page_Route::uri($_page['id'], 'blog', array(
+			'uri' => '{uri}'
+		));
+		
+		$posts = array();
+		foreach ($_posts as $_row) {
+			$_item = $_row->as_array();
+			$_item['element_type'] = 'blog';
+			$_item['list_link'] = $list_link;
+			$_item['link'] = str_replace('{uri}', $_row->uri, $link_tpl);
+			
+			$posts[$_row->public_date][] = $_item;
+		}
+		
+		return $posts;
+	}
+	
 }

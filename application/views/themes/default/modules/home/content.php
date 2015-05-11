@@ -11,6 +11,8 @@
 	echo View_Theme::factory('modules/home/modules/services', array('elements' => $services));
 	
 	echo View_Theme::factory('modules/home/modules/clients', array('elements' => $clients));
+	
+	echo View_Theme::factory('modules/home/modules/elements', array('elemenets' => $elemenets))
 
 ?>
 

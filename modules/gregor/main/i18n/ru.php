@@ -154,4 +154,6 @@ return array(
 	'Page type value must be input.' => 'Страница не может ссылаться сама на себя, либо некорректный url',
 	
 	'Learn more' => 'Узнать больше',
+	'Read more' => 'Подробнее',
+	'Action' => 'Акция',
 );

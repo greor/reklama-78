@@ -2805,6 +2805,12 @@
     line-height: 20px;
 }
 
+.blog-text {
+	margin-bottom: 20px;
+}
+.blog-text p {
+	margin-bottom: 0;
+}	
 
 @media (max-width: 991px) {
 	.services-boxes .service-icon {
