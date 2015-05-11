@@ -43,13 +43,20 @@ class Controller_Widgets_Recent extends Controller {
 		}
 	
 		$_date = date('Y-m-d H:i:s');
-		$_news = ORM::factory('news')
+		$orm = ORM::factory('news')
 			->where('public_date', '<=', $_date)
 			->where('public_date', '>=', $date)
-			->where('uri', '!=', '')
+			->where('uri', '!=', '');
+		
+		$query_id = $this->request->query('news');
+		if ( ! empty($query_id)) {
+			$orm->where('id', '!=', $query_id);
+		}
+	
+		$_news = $orm
 			->limit($this->limit)
 			->find_all();
-	
+		
 		$link_tpl = URL::base().Page_Route::uri($_page['id'], 'news', array(
 			'uri' => '{uri}'
 		));
@@ -71,17 +78,24 @@ class Controller_Widgets_Recent extends Controller {
 		}
 	
 		$_date = date('Y-m-d H:i:s');
-		$_actions = ORM::factory('action')
+		$orm = ORM::factory('action')
 			->where('public_date', '<=', $_date)
 			->and_where_open()
 				->where('hidden_date', '>', $_date)
 				->or_where('hidden_date', '=', '0000-00-00 00:00:00')
 			->and_where_close()
 			->where('uri', '!=', '')
-			->where('public_date', '!=', '0000-00-00 00:00:00')
+			->where('public_date', '!=', '0000-00-00 00:00:00');
+	
+		$query_id = $this->request->query('actions');
+		if ( ! empty($query_id)) {
+			$orm->where('id', '!=', $query_id);
+		}
+		
+		$_actions = $orm
 			->limit($this->limit)
 			->find_all();
-	
+		
 		$link_tpl = URL::base().Page_Route::uri($_page['id'], 'actions', array(
 			'date' => '{date}',
 			'uri' => '{uri}',
@@ -111,12 +125,19 @@ class Controller_Widgets_Recent extends Controller {
 		}
 	
 		$_date = date('Y-m-d H:i:s');
-		$_posts = ORM::factory('post')
+		$orm = ORM::factory('post')
 			->where('public_date', '<=', $_date)
-			->where('public_date', '>=', $date)
+			->where('public_date', '>=', $date);
+		
+		$query_id = $this->request->query('posts');
+		if ( ! empty($query_id)) {
+			$orm->where('id', '!=', $query_id);
+		}
+	
+		$_posts = $orm
 			->limit($this->limit)
 			->find_all();
-	
+		
 		$link_tpl = URL::base().Page_Route::uri($_page['id'], 'blog', array(
 			'uri' => '{uri}'
 		));
