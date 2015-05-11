@@ -156,4 +156,5 @@ return array(
 	'Learn more' => 'Узнать больше',
 	'Read more' => 'Подробнее',
 	'Action' => 'Акция',
+	'Contacts' => 'Контакты',
 );
