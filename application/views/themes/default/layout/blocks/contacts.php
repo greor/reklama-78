@@ -1,7 +1,7 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-	$phone_block = Helper_Block::get_block('phone_footer');
-	$email_block = Helper_Block::get_block('email_footer');
+	$phone_block = Helper_Block::get_block('phone');
+	$email_block = Helper_Block::get_block('email');
 
 	if (empty($phone_block['text']) AND empty($email_block['text'])) {
 		return;
@@ -17,7 +17,15 @@
 			echo '<li><span>', HTML::chars($phone_block['title']), '</span>', $phone_block['text'], '</li>';
 		} 
 		if ( ! empty($email_block['text'])) {
-			echo '<li><span>', HTML::chars($email_block['title']), '</span>', HTML::mailto(strip_tags($email_block['text'])), '</li>';
+			$_text = str_replace(array('<br>', '<br/>', '<br />'), ' ', $email_block['text']);
+			$_email = explode(' ', $_text);
+			if ( ! empty($_email)) {
+				foreach ($_email as & $_v) {
+					$_v = HTML::mailto(strip_tags($_v));
+				}
+				
+				echo '<li><span>', HTML::chars($email_block['title']), '</span>', implode('<br>', $_email), '</li>';
+			}
 		} 
 ?>		
 		</ul>
