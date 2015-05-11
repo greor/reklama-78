@@ -7,13 +7,14 @@
 		<div class="row">
 			<div class="col-sm-9">
 				<div class="blog-article">
-					<div class="blog-article-thumbnail">
 <?php
-						echo HTML::image($service['image'], array(
+					if ( ! empty($service['image'])) {
+						
+						echo '<div class="blog-article-thumbnail">', HTML::image($service['image'], array(
 							'alt' => $service['title']
-						)); 
-?>					
-					</div>
+						)), '</div>'; 
+					}
+?>							
 					<div class="blog-article-details">
 						<h2><?php echo HTML::chars($service['title']); ?></h2>
 					</div>
