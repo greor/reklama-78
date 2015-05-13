@@ -36,23 +36,23 @@
 <body>
 
 	<div id="page-wrapper">
-        <header>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-2">
-                        <a id="logo" href="<?php echo URL::base(); ?>">
-                            <img src="<?php echo $MEDIA; ?>images/backgrounds/logo.png" alt="">
-                        </a>
-                    </div>
-                    <div class="col-sm-10">
+		<header>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+						<a id="logo" href="<?php echo URL::base(); ?>">
+							<img src="<?php echo $MEDIA; ?>images/backgrounds/logo.png" alt="">
+						</a>
+					</div>
+					<div class="col-sm-10">
 <?php
 // 						echo View_Theme::factory('layout/search');
 						echo View_Theme::factory('menu/top', array('menu' => $menu));
 ?>
-                    </div>
-                </div>
-            </div>
-        </header>
+					</div>
+				</div>
+			</div>
+		</header>
         <div class="content">
 <?php 
 		echo $content; 
