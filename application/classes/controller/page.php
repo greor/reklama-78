@@ -15,6 +15,11 @@ class Controller_Page extends Controller_Front {
 
 	public function action_static()
 	{
+		$this->breadcrumbs[] = array(
+			'title' => $this->request->page['title']
+		);
+		$this->breadcrumbs_title = $this->request->page['title'];
+		
 		$orm = ORM::factory('page', $this->page_id);
 		if ( ! $orm->loaded())
 			throw new HTTP_Exception_404;
