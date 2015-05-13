@@ -123,4 +123,32 @@ return array(
 		'path' => 'upload/images/',
 		'quality' => 100
 	),
+	'isotope_360x240' => array(
+		'path' => 'upload/images/',
+		'resize' => array(
+			'width' => 360,
+			'height' => 240,
+			'master' => Image::INVERSE,
+		),
+		'crop' => array(
+			'width' => 360,
+			'height' => 240,
+		),
+		'path' => 'upload/images/',
+		'quality' => 100
+	),
+	'isotope_800x600' => array(
+		'path' => 'upload/images/',
+		'resize' => array(
+			'width' => 800,
+			'height' => 600,
+			'master' => Image::AUTO,
+		),
+		'crop' => array(
+			'width' => 800,
+			'height' => 600,
+		),
+		'path' => 'upload/images/',
+		'quality' => 100
+	),
 );
