@@ -285,7 +285,7 @@ class Controller_Admin_Modules_Photo extends Controller_Admin_Front {
 					$values['uri'] = $this->unique_transliterate($values['title'], $orm, 'uri');
 				}
 				
-				$wrapper->save($values);
+				$wrapper->save($values + $_FILES);
 				Controller_Admin_Structure::clear_structure_cache();
 			} catch (ORM_Validation_Exception $e) {
 				$errors = $e->errors('');

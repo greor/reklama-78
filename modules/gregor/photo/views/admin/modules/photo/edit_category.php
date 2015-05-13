@@ -112,6 +112,17 @@
 			)),
 		));
 		
+/**** image ****/
+		
+		echo View_Admin::factory('form/image_wrapper', array(
+			'field'      => 'image',
+			'orm_helper' => $wrapper,
+			'errors'     => $errors,
+			'labels'     => $labels,
+			'required'   => $required,
+			'help_text'  => '360x240px',
+		));
+		
 /**** additional params block ****/
 
 		echo View_Admin::factory('form/seo', array(

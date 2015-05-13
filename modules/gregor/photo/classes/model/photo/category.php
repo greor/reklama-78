@@ -23,6 +23,7 @@ class Model_Photo_Category extends ORM_Base {
 			'group'           => 'Group',
 			'uri'             => 'URI',
 			'title'           => 'Album',
+			'image'           => 'Image',
 			'status'          => 'Status',
 			'title_tag'       => 'Title tag',
 			'keywords_tag'    => 'Keywords tag',
@@ -48,6 +49,10 @@ class Model_Photo_Category extends ORM_Base {
 				array( 'min_length', array( ':value', 2 ) ),
 				array( 'max_length', array( ':value', 100 ) ),
 				array( 'alpha_dash' ),
+			),
+			'image' => array(
+				array( 'not_empty' ),
+				array( 'max_length', array( ':value', 255 ) ),
 			),
 // 			'group' => array(
 // 				array( 'not_empty' ),
