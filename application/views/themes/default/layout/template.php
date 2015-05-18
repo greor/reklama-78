@@ -25,8 +25,8 @@
 		echo HTML::style($_css);
 	} 
 ?>
-	<link rel="stylesheet" href="<?php echo $MEDIA; ?>assets/css/custom.css">
-	<link rel="stylesheet" href="<?php echo $MEDIA; ?>assets/css/pages-style.css">
+	<link rel="stylesheet" href="<?php echo $MEDIA; ?>assets/css/custom.css?v=2">
+	<link rel="stylesheet" href="<?php echo $MEDIA; ?>assets/css/pages-style.css?v=2">
 	
 	<script type="text/javascript">
 	var s = {};
