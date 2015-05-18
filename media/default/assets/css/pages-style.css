@@ -129,7 +129,7 @@
 		display: block;
 		font-size: 14px;
 		font-weight: 600;
-		color: #3b3e43;
+		color: #000;
 	}
 	
 	.menu > li > a {
@@ -147,7 +147,7 @@
 	.menu li a:hover,
 	.menu li.active > a,
 	.menu li.sfHover > a {
-		color: #bca480;
+		color: #3355aa;
 		text-decoration: none;
 	}
 	
@@ -160,8 +160,7 @@
 		width: 240px;
 		padding: 25px 0;
 		border: 1px solid #d7d7d7;
-		border-top: 2px solid #bca480;
-		background-color: #fff;
+		background-color: #fff !important;
 	}
 	
 	.menu li.dropdown ul li a {
@@ -170,8 +169,8 @@
 	
 	.menu li.dropdown ul li a:before {
 		display: inline-block;
-		color: #bca480;
-		border: 1px solid #bca480;
+		color: #000;
+		border: 1px solid #000;
 		border-radius: 50%;
 		width: 17px;
 		height: 17px;
@@ -329,6 +328,7 @@
  ***********************************************************************************/	
 	
 	#mobile-menu-button {
+		color: #556688;
 		float: right;
 		display: none;
 		font-size: 32px;
@@ -341,7 +341,7 @@
 	}
 	
 	#mobile-menu-button:hover {
-		background-color: #bca480;
+		background-color: #556688;
 		color: #fff;
 	}
 	
@@ -350,8 +350,16 @@
 		list-style: none;
 		display: none;
 		margin: 0;
-		background-color: #bca480;
+		background-color: #556688;
 		color: #fff;
+	}
+	
+	.dropdown ul {
+		background-color: #cccccc !important;
+		color: #556688 !important;
+	} 
+	.dropdown ul a {
+		color: #000 !important;
 	}
 	
 	#mobile-menu li a {
@@ -500,7 +508,7 @@
 			width: 100%;
 			background-color: #fff;
 			z-index: 99999;
-			box-shadow: 0 1px 3px #d7d7d7;
+			box-shadow: 0 1px 3px #556688;
 		}
 		
 		.header-sticky #logo {
@@ -559,7 +567,7 @@
 	}
 	
 	#page-header.dark-1 {
-		background-color: #3b3e43;
+		background-color: #556688;
 		color: #fff;
 	}
 	
@@ -581,7 +589,8 @@
 	
 	#page-header.dark-1 .breadcrumb li.active,
 	#page-header.dark-2 .breadcrumb li.active {
-		color: #bca480;
+		color: #eedd22;
+		font-weight: 600;
 	}
 
 /***********************************************************************************
@@ -595,7 +604,7 @@
  ***********************************************************************************/
  	
 	#footer-top {
-		background-color: #f1f1f1 ;
+		background-color: #556688;
 	}
 	
 	#footer-top .widget:first-child {
@@ -625,12 +634,12 @@
  	
 	#footer {
 		padding: 100px 0 30px 0;
-		background-color: #3b3e43;
-		color: #d7d7d7;
+		background-color: #fff;
+		color: #000;
 	}
 	
 	#footer a {
-		color: #d7d7d7;
+		color: #000;
 	}
 	
 	#footer a:hover {
@@ -671,8 +680,8 @@
  ***********************************************************************************/
  	
 	#footer-bottom {
-		background-color: #2b2e31;
-		color: #585c62;
+		background-color: #556688;
+		color: #cccccc;
 	}
 	
 	#footer-bottom a {
@@ -941,7 +950,7 @@
 		left: 0; 
 		right: 0;
 		bottom: 0;
-		background-color: rgba(59, 62, 67, 0.85);
+		background-color: rgba(0, 0, 0, 0.65);
 		opacity: 0;
 		text-align: center;
 		color: #bca480;
@@ -1203,7 +1212,7 @@
 	.blog-article-details h6 {
 		font-weight: 700;
 		margin-bottom: 8px;
-		color: #bca480;
+		color: #3355aa;
 	}
 	
 	.blog-article-details h4 {

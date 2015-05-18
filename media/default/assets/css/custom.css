@@ -44,7 +44,7 @@
  	body {
 		background-color: #fff;
 		overflow-x: hidden;
-		color: #3b3e43;
+		color: #000;
 		font: 13px/24px "Open Sans", Arial, sans-serif;
 		letter-spacing: 1px;
 	}
@@ -109,7 +109,7 @@
 	h4 a, 
 	h5 a, 
 	h6 a { 
-		color: #3b3e43;
+		color: #000;
 		text-decoration: none;
 		-webkit-transition: all 0.3s;
 				transition: all 0.3s;
@@ -150,13 +150,13 @@
 	}
 	
 	a {
-		color: #bca480;
+		color: #000;
 	}
 	
 	a:hover,
 	a:focus { 
 		outline: 0;
-		color: #bca480;
+		color: #3355aa;
 	}
 	
 	img {
@@ -181,7 +181,7 @@
 	}
 	
 	.text-primary {
-		color: #bca480;
+		color: #fff;
 	}
 	
 	label {
@@ -253,7 +253,7 @@
 	
 	.headline.style-3 strong {
 		margin-bottom: 0;
-		color: #bca480;
+		color: #3355aa;
 		font-size: 12px;
 		letter-spacing: 2.5px;
 		line-height: 18px;
@@ -402,20 +402,21 @@
 		display: inline-block;
 		line-height: 43px;
 		text-align: center; 
-		border-left: 1px solid #fff;
+		border-left: 1px solid #000;
 		padding-left: 20px;
 		margin: -15px 0 -15px 20px;
 	}
 	
 	/* DEFAULT BUTTON */
 	.btn-default {
-		border: 1px solid #bca480;
-		background-color: #bca480;
-		color: #fff;
+/*		border: 1px solid #556688; */
+		border: 1px solid #eedd22;
+		background-color: #eedd22;
+		color: #000;
 	}
 	
 	.btn-default:after {
-		background-color: #3b3e43;
+		background-color: #556688;
 	}
 	
 	.btn-default:hover {
@@ -1551,11 +1552,19 @@
 		line-height: 48px;
 		text-decoration: none;
 		cursor: pointer;
-		color: #bca480;
+		color: #cccccc;
+		background: #000;
 		text-align: center;
-		border-radius: 5px;
+		border-radius: 50%;
 		-webkit-transition: all 0.3s;
 				transition: all 0.3s;
+	}
+	
+	#go-top i {
+		
+		border-radius: 50%;
+		font-size: 49px;
+		line-height: 49px;
 	}
 	
 	#go-top:hover {
@@ -1686,20 +1695,31 @@
 	}	
 	
 	.bx-wrapper .bx-controls-direction a {
-		background-color: #bca480;
+/*		background-color: #556688; */
+		background-color: #cccccc;
+		color: #000;
 	}
 	
 	.bx-wrapper .bx-controls-direction a:hover {
-		background-color: #3b3e43;
+		background-color: #556688;
+		color: #fff;
 	}
 	
 	.bx-wrapper .bx-prev {
 		left: 0;
+		background: url(../../images/backgrounds/prev_bl.png) no-repeat center center;
+	}
+	
+	.bx-wrapper .bx-prev:hover {
 		background: url(../../images/backgrounds/prev.png) no-repeat center center;
 	}
 	
 	.bx-wrapper .bx-next {
 		right: 0; 
+		background: url(../../images/backgrounds/next_bl.png) no-repeat center center;
+	}
+	
+	.bx-wrapper .bx-next:hover {
 		background: url(../../images/backgrounds/next.png) no-repeat center center;
 	}
 	
@@ -1713,8 +1733,8 @@
 	.bx-wrapper .bx-pager.bx-default-pager a {
 		width: 8px;
 		height: 8px;
-		border: 1px solid #bca480;
-		background-color: #bca480;
+		border: 1px solid #3355aa;
+		background-color: #3355aa;
 	}
 	
 	.bx-wrapper .bx-pager.bx-default-pager a:hover,
@@ -1875,7 +1895,7 @@
 	
 	.widget-title:after {
 		content: "";
-		border-bottom: 2px solid #bca480;
+		border-bottom: 2px solid #3355aa;
 		display: block;
 		width: 45px;
 		margin-top: 15px;
@@ -1984,7 +2004,7 @@
 	}
 	
 	.widget-pages ul li {
-		border-bottom: 1px solid #d7d7d7;
+		border-bottom: 1px solid #ccc;
 		padding-bottom: 15px;
 		margin-bottom: 15px;
 	}
@@ -2334,7 +2354,7 @@
 	}
 	
 	.widget-contact ul li span {
-		color: #bca480;
+		color: #000;
 		text-transform: uppercase;
 		font-size: 14px;
 		font-weight: 600;
@@ -2719,7 +2739,7 @@
 	color: #fff;
 }
 .info-box h4 {
-	color: #FFFF00;
+	color: #eedd22;
 }
 
 .info-text {
@@ -2777,12 +2797,16 @@
 }
 
 .welcome-block h1 {
-	/*color: #ffff00;*/
+	color: #cccccc;
+}
+
+.info-box h1 {
+	color: #cccccc;
 }
 
 .welcome-text {
 	text-transform: uppercase;
-	font-size: 24px;
+	font-size: 18px;
 	line-height: 32px;
 	font-weight: 600;
 }
@@ -2798,7 +2822,7 @@
 	margin-top: 0;
 }
 .promo-holder .headline.style-1 strong {
-	color: #bca480;
+	color: #3355aa;
     font-weight: 600;
     font-size: 13px;
     letter-spacing: 3px;
@@ -2857,7 +2881,7 @@
 	height: 100%;
 	vertical-align: middle;
 	text-align: center;
-	color: #fff !important;
+	color: #eedd22 !important;
 	text-decoration: none;
 }
 
@@ -2877,3 +2901,12 @@
 	
 	
 	
+.isotope-item .btn-default,
+.blog-article .btn-default,
+.portfolio-item .btn-default,
+form .btn-default {
+	background-color: #cccccc;
+	border-color: #cccccc;
+}
+
+
