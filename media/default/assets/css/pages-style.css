@@ -129,7 +129,7 @@
 		display: block;
 		font-size: 14px;
 		font-weight: 600;
-		color: #000;
+		color: #181a33;
 	}
 	
 	.menu > li > a {
@@ -147,7 +147,7 @@
 	.menu li a:hover,
 	.menu li.active > a,
 	.menu li.sfHover > a {
-		color: #3355aa;
+		color: #e30917;
 		text-decoration: none;
 	}
 	
@@ -328,7 +328,7 @@
  ***********************************************************************************/	
 	
 	#mobile-menu-button {
-		color: #556688;
+		color: #181a33;
 		float: right;
 		display: none;
 		font-size: 32px;
@@ -341,7 +341,7 @@
 	}
 	
 	#mobile-menu-button:hover {
-		background-color: #556688;
+		background-color: #181a33;
 		color: #fff;
 	}
 	
@@ -350,12 +350,12 @@
 		list-style: none;
 		display: none;
 		margin: 0;
-		background-color: #556688;
+		background-color: #181a33;
 		color: #fff;
 	}
 	
 	.dropdown ul {
-		background-color: #cccccc !important;
+		background-color: #ddd !important;
 		color: #556688 !important;
 	} 
 	.dropdown ul a {
@@ -508,7 +508,7 @@
 			width: 100%;
 			background-color: #fff;
 			z-index: 99999;
-			box-shadow: 0 1px 3px #556688;
+			box-shadow: 0 1px 3px #181a33;
 		}
 		
 		.header-sticky #logo {
@@ -567,7 +567,7 @@
 	}
 	
 	#page-header.dark-1 {
-		background-color: #556688;
+		background-color: #181a33;
 		color: #fff;
 	}
 	
@@ -584,12 +584,12 @@
 	
 	#page-header.dark-1 .breadcrumb li a:hover,
 	#page-header.dark-2 .breadcrumb li a:hover {
-		color: #bca480;
+		color: #fd3b47;
 	}
 	
 	#page-header.dark-1 .breadcrumb li.active,
 	#page-header.dark-2 .breadcrumb li.active {
-		color: #eedd22;
+		color: #fd3b47;
 		font-weight: 600;
 	}
 
@@ -604,7 +604,7 @@
  ***********************************************************************************/
  	
 	#footer-top {
-		background-color: #556688;
+		background-color: #181a33;
 	}
 	
 	#footer-top .widget:first-child {
@@ -643,7 +643,7 @@
 	}
 	
 	#footer a:hover {
-		color: #bca480;
+		color: #e30917;
 	}
 	
 	#footer .widget-title {
@@ -680,16 +680,16 @@
  ***********************************************************************************/
  	
 	#footer-bottom {
-		background-color: #556688;
-		color: #cccccc;
+		background-color: #181a33;
+		color: #ddd;
 	}
 	
 	#footer-bottom a {
-		color: #585c62;
+		color: #ddd;
 	}
 	
 	#footer-bottom a:hover {
-		color: #bca480;
+		color: #ddd;
 	}
 	
 	#footer-bottom .widget:first-child {
@@ -843,7 +843,7 @@
 		position: absolute;
 		bottom: 0;
 		display: block;
-		border-bottom: 1px solid #bca480;
+		border-bottom: 1px solid #181a33;
 		width: 50px;
 		content: "";
 	}
@@ -950,7 +950,7 @@
 		left: 0; 
 		right: 0;
 		bottom: 0;
-		background-color: rgba(0, 0, 0, 0.65);
+		background-color: rgba(0, 0, 0, 0.8);
 		opacity: 0;
 		text-align: center;
 		color: #bca480;
@@ -1039,7 +1039,7 @@
 	}
 	
 	.portfolio-item.classic .portfolio-item-description h3 a:hover {
-		color: #bca480;
+		color: #e30917;
 	}
 	
 	.portfolio-item.classic .portfolio-item-description h3 {
@@ -1212,7 +1212,7 @@
 	.blog-article-details h6 {
 		font-weight: 700;
 		margin-bottom: 8px;
-		color: #3355aa;
+		color: #e30917;
 	}
 	
 	.blog-article-details h4 {
@@ -1406,17 +1406,17 @@
 	#contact-form textarea {
 		margin-top: 20px;
 		border: none;
-		border-bottom: 1px solid #d7d7d7;
+		border-bottom: 1px solid #ddd;
 	}
 	
 	#contact-form input[type="text"]:focus,
 	#contact-form textarea:focus {
-		border-bottom-color: #3b3e43;
+		border-bottom-color: #181a33;
 		outline: 0;
 	}
 	
 	#contact-form input[type="submit"]:hover {
-		background-color: #3b3e43;
+		background-color: #181a33;
 	}
 	
 	#contact-form label.error {
