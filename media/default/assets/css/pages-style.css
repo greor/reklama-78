@@ -634,12 +634,12 @@
  	
 	#footer {
 		padding: 100px 0 30px 0;
-		background-color: #fff;
-		color: #000;
+		background-color: #181a33;
+		color: #ddd;
 	}
 	
 	#footer a {
-		color: #000;
+		color: #fff;
 	}
 	
 	#footer a:hover {

@@ -2924,3 +2924,16 @@ form .btn-default:hover {
 }
 
 
+#footer .widget-title {
+	border-color: #fff;
+}
+#footer .widget-title::after {
+	border-color: #ddd;
+}
+#footer .widget-contact ul li span {
+	color: #fd3b47;
+}
+
+#footer-bottom, #footer-top {
+	display: none;
+}
