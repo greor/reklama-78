@@ -2931,9 +2931,27 @@ form .btn-default:hover {
 	border-color: #ddd;
 }
 #footer .widget-contact ul li span {
-	color: #fd3b47;
+	color: #fff;
+	font-weight: 800;
+}
+#footer .widget-contact a {
+	color: #ddd;
 }
 
 #footer-bottom, #footer-top {
 	display: none;
+}
+
+.site-name {
+	font-size: 16px;
+	display: inline-block;
+	margin-left: 15px;
+	font-weight: 700;
+	margin-top: 5px;
+	line-height: 60px;
+}
+.header-sticky .site-name {
+	margin-left: 0;
+	font-weight: 300;
+	font-weight: 600;
 }

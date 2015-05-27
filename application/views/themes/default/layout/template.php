@@ -39,12 +39,13 @@
 		<header>
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-2">
+					<div class="col-sm-3">
 						<a id="logo" href="<?php echo URL::base(); ?>">
 							<img src="<?php echo $MEDIA; ?>images/backgrounds/logo.jpg" alt="">
 						</a>
+						<span class="site-name"><?php echo $SITE['name']?></span>
 					</div>
-					<div class="col-sm-10">
+					<div class="col-sm-9">
 <?php
 // 						echo View_Theme::factory('layout/search');
 						echo View_Theme::factory('menu/top', array('menu' => $menu));
