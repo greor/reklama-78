@@ -17,7 +17,7 @@
 						echo '<h4><strong>', HTML::chars($block['name']), '</strong></h4>';
 					} 
 					if ( ! empty($block['title'])) {
-						echo '<h1>', HTML::chars($block['title']), '</h1>';
+						echo '<h2>', HTML::chars($block['title']), '</h2>';
 					} 
 					if ( ! empty($block['text'])) {
 						echo '<div class="info-text">', $block['text'], '</div>';
