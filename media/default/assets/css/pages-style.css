@@ -116,7 +116,7 @@
 	
 	.menu {
 		float: right;
-		margin-top: 42px;
+		margin-top: 35px;
 		-webkit-transition: all 0.3s;
 				transition: all 0.3s;
 	}
@@ -335,7 +335,7 @@
 		line-height: 32px;
 		padding: 5px 10px;
 		border-radius: 3px;
-		margin-top: 42px;
+		margin-top: 35px;
 		-webkit-transition: all 0.3s;
 				transition: all 0.3s;
 	}
