@@ -41,7 +41,7 @@
 				<div class="row">
 					<div class="col-sm-2">
 						<a id="logo" href="<?php echo URL::base(); ?>">
-							<img src="<?php echo $MEDIA; ?>images/backgrounds/logo.png" alt="">
+							<img src="<?php echo $MEDIA; ?>images/backgrounds/logo.jpg" alt="">
 						</a>
 					</div>
 					<div class="col-sm-10">
