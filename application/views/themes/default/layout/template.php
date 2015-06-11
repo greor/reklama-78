@@ -40,9 +40,16 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-3">
-						<a id="logo" href="<?php echo URL::base(); ?>">
-							<img src="<?php echo $MEDIA; ?>images/backgrounds/logo.jpg" alt="">
-						</a>
+<?php
+						if ( ! empty($SITE['logo'])) {
+							$logo_file = Thumb::uri('logo', ORM_Helper::factory('site')->file_uri('logo', $SITE['logo']));
+							echo HTML::anchor(URL::base(), HTML::image($logo_file, array(
+								'alt' => $SITE['name']
+							)), array(
+								'id' => 'logo'
+							));
+						}
+?>
 						<span class="site-name"><?php echo $SITE['name']?></span>
 					</div>
 					<div class="col-sm-9">

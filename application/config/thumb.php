@@ -151,4 +151,15 @@ return array(
 		'path' => 'upload/images/',
 		'quality' => 100
 	),
+	'logo' => array(
+		'path' => 'upload/images/',
+		'resize' => array(
+			'width' => 69,
+			'master' => Image::WIDTH,
+		),
+		'path' => 'upload/images/',
+		'quality' => 100
+	),
+	
+	
 );
