@@ -25,8 +25,8 @@
 		echo HTML::style($_css);
 	} 
 ?>
-	<link rel="stylesheet" href="<?php echo $MEDIA; ?>assets/css/custom.css?v=2">
-	<link rel="stylesheet" href="<?php echo $MEDIA; ?>assets/css/pages-style.css?v=2">
+	<link rel="stylesheet" href="<?php echo $MEDIA; ?>assets/css/custom.css?v=3">
+	<link rel="stylesheet" href="<?php echo $MEDIA; ?>assets/css/pages-style.css?v=3">
 	
 	<script type="text/javascript">
 	var s = {};
@@ -50,7 +50,10 @@
 							));
 						}
 ?>
-						<span class="site-name"><?php echo $SITE['name']?></span>
+						<?php if (0): ?>
+						<span class="site-name">СИЛА В РЕКЛАМЕ</span>
+						<?php endif; ?>
+						
 					</div>
 					<div class="col-sm-9">
 <?php

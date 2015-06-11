@@ -154,7 +154,7 @@ return array(
 	'logo' => array(
 		'path' => 'upload/images/',
 		'resize' => array(
-			'width' => 69,
+			'width' => 120,
 			'master' => Image::WIDTH,
 		),
 		'path' => 'upload/images/',

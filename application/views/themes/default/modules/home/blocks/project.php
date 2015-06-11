@@ -14,7 +14,7 @@
 				<div class="info-box parallax" style="<?php echo $style; ?>">
 <?php
 					if ( ! empty($block['name'])) {
-						echo '<h4><strong>', HTML::chars($block['name']), '</strong></h4>';
+						echo '<h4><strong>', HTML::chars($block['name']), '</strong></h4><br>';
 					} 
 					if ( ! empty($block['title'])) {
 						echo '<h2>', HTML::chars($block['title']), '</h2>';

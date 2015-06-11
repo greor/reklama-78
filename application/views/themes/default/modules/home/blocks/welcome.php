@@ -14,7 +14,7 @@
 					<div class="col-sm-12">	
 <?php
 					if ( ! empty($block['title'])) {
-						echo '<h1 class="text-center">', HTML::chars($block['title']), '</h1>';
+						echo '<h1 class="text-center">', HTML::chars($block['title']), '</h1><br>';
 					} 
 					if ( ! empty($block['text'])) {
 						echo '<div class="welcome-text">', $block['text'], '</div>';
