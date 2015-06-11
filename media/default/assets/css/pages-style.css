@@ -116,7 +116,7 @@
 	
 	.menu {
 		float: right;
-		margin-top: 35px;
+		margin-top: 55px;
 		-webkit-transition: all 0.3s;
 				transition: all 0.3s;
 	}
@@ -136,7 +136,7 @@
 		position: relative;
 		padding: 10px 20px 51px 20px;
 		margin-right: 15px;
-		font-size: 12px;
+		font-size: 14px;
 		text-transform: uppercase;
 	}
 	

@@ -2746,10 +2746,16 @@
 }
 .info-box h4 {
 	color: #ddd;
+	display: inline-block;
+	padding: 0 5px;
+	margin: 0 auto 10px;
+	background: #181a33;
 }
 
 .info-text {
-	margin-bottom: 20px;
+	margin: 0 15px 20px;
+	background: #181a33;
+	padding: 2px 5px;
 }
 
 /*
@@ -2803,11 +2809,19 @@
 }
 
 .welcome-block h1 {
-	color: #b7cefc;
+	color: #eedd22;
+	display: inline-block;
+	padding: 0 15px;
+	margin: 0 auto 30px;
+	background: #181a33;
 }
 
 .info-box h2 {
-	color: #b7cefc;
+	color: #eedd22;
+	display: inline-block;
+	padding: 0 15px;
+	margin: 0 auto 30px;
+	background: #181a33;
 }
 
 .welcome-text {
@@ -2815,6 +2829,8 @@
 	font-size: 18px;
 	line-height: 32px;
 	font-weight: 600;
+	background: #181a33;
+	padding: 2px 5px;
 }
 
 .promo-holder .bx-wrapper .bx-prev {
