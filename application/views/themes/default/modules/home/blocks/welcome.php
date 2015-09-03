@@ -7,7 +7,7 @@
 	}
 ?>
 
-	<section class="full-section parallax welcome-block" style="background-image:url(<?php echo $block['image']; ?>);">
+	<section class="full-section welcome-block" style="background-image:url(<?php echo $block['image']; ?>);">
 		<div class="full-section-content">
 			<div class="container">
 				<div class="row">

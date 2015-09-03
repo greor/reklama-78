@@ -116,7 +116,7 @@
 	
 	.menu {
 		float: right;
-		margin-top: 55px;
+		margin-top: 35px;
 		-webkit-transition: all 0.3s;
 				transition: all 0.3s;
 	}
@@ -136,7 +136,7 @@
 		position: relative;
 		padding: 10px 20px 51px 20px;
 		margin-right: 15px;
-		font-size: 14px;
+		font-size: 12px;
 		text-transform: uppercase;
 	}
 	
@@ -589,7 +589,7 @@
 	
 	#page-header.dark-1 .breadcrumb li.active,
 	#page-header.dark-2 .breadcrumb li.active {
-		color: #fd3b47;
+		color: #3da7d2;
 		font-weight: 600;
 	}
 

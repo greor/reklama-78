@@ -156,7 +156,7 @@
 	a:hover,
 	a:focus { 
 		outline: 0;
-		color: #e30917;
+		color: #3da7d2;
 	}
 	
 	img {
@@ -254,7 +254,7 @@
 	
 	.headline.style-3 strong {
 		margin-bottom: 0;
-		color: #e30917;
+		color: #3da7d2;
 		font-size: 12px;
 		letter-spacing: 2.5px;
 		line-height: 18px;
@@ -263,7 +263,7 @@
 	}
 	
 	.headline.style-3 > h5 {
-		color: #e30917;
+		color: #3da7d2;
 	}
 	
 /***********************************************************************************
@@ -415,8 +415,8 @@
 	/* DEFAULT BUTTON */
 	.btn-default {
 /*		border: 1px solid #556688; */
-		border: 1px solid #e30917;
-		background-color: #e30917;
+		border: 1px solid #3da7d2;
+		background-color: #3da7d2;
 		color: #fff;
 	}
 	
@@ -1558,7 +1558,7 @@
 		line-height: 48px;
 		text-decoration: none;
 		cursor: pointer;
-		color: #cccccc;
+		color: #3da7d2;
 		background: #000;
 		text-align: center;
 		border-radius: 50%;
@@ -1958,7 +1958,7 @@
 	}
 	
 	.widget-categories ul li a:hover {
-		color: #e30917;
+		color: #3da7d2;
 		text-decoration: none;
 	}
 	
@@ -2175,7 +2175,7 @@
 	}
 	
 	.widget-recent-posts ul li .post-title:hover {
-		color: #e30917;
+		color: #3da7d2;
 		text-decoration: none;
 	}
 	
@@ -2809,19 +2809,19 @@
 }
 
 .welcome-block h1 {
-	color: #eedd22;
+	color: #e30917;
 	display: inline-block;
 	padding: 0 15px;
 	margin: 0 auto 30px;
-	background: #181a33;
+	background: #fff;
 }
 
 .info-box h2 {
-	color: #eedd22;
+	color: #e30917;
 	display: inline-block;
 	padding: 0 15px;
 	margin: 0 auto 30px;
-	background: #181a33;
+	background: #fff;
 }
 
 .welcome-text {
@@ -2844,7 +2844,7 @@
 	margin-top: 0;
 }
 .promo-holder .headline.style-1 strong {
-	color: #e30917;
+	color: #3da7d2;
     font-weight: 600;
     font-size: 13px;
     letter-spacing: 3px;
@@ -2927,9 +2927,9 @@
 .blog-article .btn-default,
 .portfolio-item .btn-default,
 form .btn-default {
-	background-color: #dddddd;
-	border-color: #dddddd;
-	color: #181a33;
+	background-color: #3da7d2;
+	border-color: #3da7d2;
+	color: #fff;
 }
 .isotope-item .btn-default:hover,
 .blog-article .btn-default:hover,
